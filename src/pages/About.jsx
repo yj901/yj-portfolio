@@ -4,22 +4,74 @@ import iconMail from "../assets/icons/Mail.svg";
 import iconCalendar from "../assets/icons/Calendar.svg";
 import iconPhone from "../assets/icons/Phone.svg";
 import Github from "../components/Github";
-import LottieAni from "../components/About/LottieAni";
+
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import RotateAni from "../components/About/RotateAni";
 
 const Container = styled.section`
   position: relative;
+  background: var(--light);
+  z-index: 0;
   width: 100%;
   height: 100vh;
-  min-height: 920px;
+  min-height: 900px;
+  word-break: keep-all;
 
-  .heroIcon {
-    width: 24px;
-  }
-
-  .lottie {
+  .rotateAni {
+    /* border: 1px solid #f00; */
     position: absolute;
     right: 11%;
     bottom: 6%;
+    z-index: -1;
+    width: 480px;
+    video {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 1700px) {
+    min-height: auto;
+    .rotateAni {
+      width: 400px;
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    .rotateAni {
+      width: 350px;
+      bottom: 13%;
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    .rotateAni {
+      width: 300px;
+      right: 8%;
+      bottom: 14%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    height: auto;
+    padding-bottom: 100px;
+    .rotateAni {
+      width: 240px;
+      bottom: 5%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .rotateAni {
+      width: 220px;
+      right: 7%;
+      bottom: 4%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    padding-bottom: 80px;
+    .rotateAni {
+      width: 150px;
+      right: 4%;
+      bottom: 4%;
+    }
   }
 `;
 
@@ -27,6 +79,21 @@ const ProfileWrap = styled.div`
   padding-top: 50px;
   display: flex;
   gap: 80px;
+  @media screen and (max-width: 1600px) {
+    gap: 60px;
+  }
+  @media screen and (max-width: 1024px) {
+    gap: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 40px;
+  }
+  @media screen and (max-width: 500px) {
+    gap: 20px;
+    padding-top: 30px;
+  }
 `;
 
 const ImgWrap = styled.div``;
@@ -37,6 +104,22 @@ const Img = styled.div`
   border-radius: 50%;
   background: #ddd;
   overflow: hidden;
+  @media screen and (max-width: 1600px) {
+    width: 180px;
+    height: 180px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 140px;
+    height: 140px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 90px;
+    height: 90px;
+  }
 `;
 
 const TxtWrap = styled.div`
@@ -48,17 +131,52 @@ const Name = styled.h3`
   font-size: 6.5rem;
   font-family: var(--nunito);
   font-weight: 600;
-  margin-right: 20px;
   span {
     font-family: "Pretendard", sans-serif;
     font-size: 2.6rem;
     font-weight: 400;
+  }
+  @media screen and (max-width: 1600px) {
+    font-size: 5.5rem;
+    span {
+      font-size: 2.2rem;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 4.8rem;
+    span {
+      font-size: 1.8rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 4rem;
+    span {
+      font-size: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 3rem;
+    span {
+      font-size: 1.5rem;
+    }
   }
 `;
 
 const Support = styled.h4`
   font-size: 3.4rem;
   font-weight: 500;
+  @media screen and (max-width: 1600px) {
+    font-size: 2.8rem;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 2.2rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Hr = styled.hr`
@@ -66,15 +184,44 @@ const Hr = styled.hr`
   border: none;
   border-top: 1px solid var(--grayd1);
   margin: 20px 0;
+  @media screen and (max-width: 1600px) {
+    width: 100px;
+    margin: 18px 0;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 80px;
+    margin: 16px 0;
+  }
+  @media screen and (max-width: 768px) {
+    width: 65px;
+    margin: 14px 0;
+  }
 `;
 
 const Introduce = styled.div`
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.8;
-
   b {
     font-weight: 700;
+  }
+  @media screen and (max-width: 1600px) {
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    .none500 {
+      display: none;
+    }
   }
 `;
 
@@ -98,21 +245,63 @@ const IntroList = styled.ul`
       width: 24px;
     }
   }
+
+  @media screen and (max-width: 1600px) {
+    margin-top: 22px;
+    gap: 10px;
+    li {
+      font-size: 1.6rem;
+      gap: 10px;
+      img {
+        width: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+    gap: 9px;
+    li {
+      font-size: 1.5rem;
+      gap: 8px;
+      img {
+        width: 18px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 16px;
+    gap: 9px;
+    li {
+      font-size: 1.4rem;
+      gap: 6px;
+      img {
+        width: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    margin-top: 14px;
+    gap: 7px;
+    li {
+      font-size: 1.3rem;
+      gap: 4px;
+      img {
+        width: 14px;
+      }
+    }
+  }
 `;
 
 const BtnWrap = styled.div`
   margin-top: 30px;
   display: flex;
-  align-items: center;
   gap: 16px;
 
   a {
-    display: block;
-    border-radius: 100px;
+    padding: 10px 25px;
     font-size: 1.8rem;
     font-weight: 600;
-    padding: 10px 25px;
-
+    border-radius: 100px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -120,17 +309,72 @@ const BtnWrap = styled.div`
     &:nth-of-type(1) {
       color: var(--light);
       background: var(--gray19);
-      border: 1px solid var(--gray19);
     }
     &:nth-of-type(2) {
       border: 1px solid var(--graybb);
     }
   }
+  @media screen and (max-width: 1600px) {
+    margin-top: 22px;
+    gap: 14px;
+    a {
+      padding: 8px 20px;
+      font-size: 1.6rem;
+      gap: 9px;
+      svg {
+        width: 18px;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+    gap: 12px;
+    a {
+      padding: 6px 16px;
+      font-size: 1.4rem;
+      gap: 8px;
+      svg {
+        width: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 15px;
+    gap: 8px;
+    a {
+      padding: 4px 14px;
+      font-size: 1.3rem;
+      gap: 6px;
+      svg {
+        width: 14px;
+      }
+    }
+  }
 `;
 
 const About = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1025px)", () => {
+      return ScrollTrigger.create({
+        id: "about",
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "+=100%",
+        pin: true,
+        pinSpacing: false,
+        scrub: true,
+      });
+    });
+
+    return () => mm.revert();
+  }, []);
+
   return (
-    <Container>
+    <Container ref={sectionRef} id="about">
       <Title title={"WHO AM I"} />
       <ProfileWrap className="inner">
         <ImgWrap>
@@ -149,8 +393,8 @@ const About = () => {
             </p>
             <p>
               웹퍼블리셔로 1년간 구조적인 퍼블리싱과 시각 완성도를 경험했고
-              <br /> 현재는 <b>React</b> 기반 UI 구성과 <b>인터랙션 개발</b>에
-              집중하고 있습니다.
+              <br className="none500" /> 현재는 <b>React</b> 기반 UI 구성과{" "}
+              <b>인터랙션 개발</b>에 집중하고 있습니다.
             </p>
             <p>
               작지만 명확한 기능이 쌓여 완성되는 그 순간에 개발의 즐거움을
@@ -183,7 +427,7 @@ const About = () => {
           </BtnWrap>
         </TxtWrap>
       </ProfileWrap>
-      <LottieAni />
+      <RotateAni />
     </Container>
   );
 };

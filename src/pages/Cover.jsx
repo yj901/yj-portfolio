@@ -10,11 +10,25 @@ const Container = styled.section`
   min-height: 920px;
   background: url(${coverbg}) center / cover no-repeat;
   color: var(--light);
+
+  @media screen and (max-width: 1600px) {
+    min-height: auto;
+  }
+  @media screen and (max-width: 1024px) {
+    height: 600px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 550px;
+    background-position: right center;
+  }
+  @media screen and (max-width: 450px) {
+    height: 450px;
+  }
 `;
 
 const Cover = () => {
   return (
-    <Container>
+    <Container id="cover">
       <Header />
       <Typography />
     </Container>

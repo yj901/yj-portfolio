@@ -10,6 +10,15 @@ const Container = styled.div`
   top: 50%;
   left: 5%;
   transform: translateY(-50%);
+  /* border: 1px solid #f00; */
+  @media screen and (max-width: 1024px) {
+    left: 9%;
+  }
+  @media screen and (max-width: 768px) {
+    position: static;
+    transform: translateY(0%);
+    margin-bottom: 10px;
+  }
 `;
 
 const CirBase = styled.div`
@@ -25,11 +34,22 @@ const CirBase = styled.div`
   &:last-of-type {
     margin-left: -20px;
   }
+
+  @media screen and (max-width: 1600px) {
+    width: calc(20px + 8vw);
+    &:last-of-type {
+      margin-left: -15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: calc(50px + 8vw);
+    &:last-of-type {
+      margin-left: -12px;
+    }
+  }
 `;
 
 const CirWithVideo = styled(CirBase)`
-  background: #000;
-
   video {
     position: absolute;
     width: 100%;
@@ -50,6 +70,20 @@ const CirWithVideo = styled(CirBase)`
 const CirWithColor = styled(CirBase)`
   background: var(--skyarr);
   user-select: none;
+  img {
+    width: 53px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    img {
+      width: calc(5px + 3vw);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    img {
+      width: calc(15px + 3vw);
+    }
+  }
 `;
 
 const PlayBtn = styled.div`
@@ -64,6 +98,25 @@ const PlayBtn = styled.div`
   svg {
     padding-left: 2px;
     width: 12px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    width: calc(3px + 1.7vw);
+    svg {
+      width: calc(5px + 0.4vw);
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    width: calc(8px + 1.7vw);
+    svg {
+      width: calc(7px + 0.4vw);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: calc(18px + 1.7vw);
+    svg {
+      width: calc(9px + 0.4vw);
+    }
   }
 `;
 

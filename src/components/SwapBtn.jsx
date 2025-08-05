@@ -4,15 +4,21 @@ import { useRef } from "react";
 
 const Container = styled.div`
   position: relative;
-  width: calc(135px + 42px);
+  padding-right: 42px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  @media screen and (max-width: 1600px) {
+    padding-right: 38px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-right: 32px;
+  }
 `;
 
 const Icon = styled.div`
   position: absolute;
-  top: 0;
+  top: 0px;
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -20,17 +26,36 @@ const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1600px) {
+    width: 38px;
+    height: 38px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 32px;
+    height: 32px;
+  }
 `;
 
 const LeftIcon = styled(Icon)`
   left: 0;
+  @media screen and (max-width: 1024px) {
+    svg {
+      width: 10px;
+    }
+  }
 `;
 
 const RightIcon = styled(Icon)`
   right: 0;
+  @media screen and (max-width: 1024px) {
+    svg {
+      width: 10px;
+    }
+  }
 `;
 
-const TextBtn = styled.div`
+const TextBtn = styled.button`
   background: var(--light);
   color: var(--gray1);
   font-size: 1.8rem;
@@ -43,16 +68,30 @@ const TextBtn = styled.div`
   justify-content: center;
   position: relative;
   z-index: 1;
+  border: none;
+  cursor: pointer;
+  @media screen and (max-width: 1600px) {
+    font-size: 1.6rem;
+    padding: 0 20px;
+    height: 38px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 1.4rem;
+    padding: 0 15px;
+    height: 32px;
+  }
 `;
 
-const SwapBtn = ({ label }) => {
+const SwapBtn = ({ label, onClick }) => {
   const leftRef = useRef(null);
   const rightRef = useRef(null);
   const textRef = useRef(null);
 
   const handleEnter = () => {
+    const isPc2 = window.innerWidth <= 1600;
+    const isTablet = window.innerWidth <= 1024;
     const isMobile = window.innerWidth <= 768;
-    const shiftX = isMobile ? 32 : 42;
+    const shiftX = isMobile ? 32 : isTablet ? 32 : isPc2 ? 38 : 42;
 
     const tl = gsap.timeline();
     tl.to(rightRef.current, {
@@ -63,7 +102,7 @@ const SwapBtn = ({ label }) => {
       .to(
         textRef.current,
         {
-          x: 42,
+          x: shiftX,
           duration: 0.3,
         },
         "<"
@@ -106,7 +145,11 @@ const SwapBtn = ({ label }) => {
   };
 
   return (
-    <Container onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+    <Container
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+      onClick={onClick}
+    >
       <LeftIcon
         ref={leftRef}
         style={{ opacity: 0, transform: "translateX(-10px)" }}
