@@ -15,15 +15,23 @@ const SliderSection = styled.section`
   margin-left: calc((100% - 1400px) / 2);
   margin-right: 150px;
   @media screen and (max-width: 1600px) {
+    margin-top: 85px;
     margin-left: 5.2%;
   }
   @media screen and (max-width: 1400px) {
     margin-left: 3%;
     margin-right: 110px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
+    margin-top: 40px;
     margin-left: 3%;
     margin-right: 3%;
+    .swiper {
+      overflow: visible;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
   }
 `;
 
@@ -51,10 +59,10 @@ const SlideArrWrap = styled.div`
   }
   @media screen and (max-width: 600px) {
     transform: translateY(-0%);
-    top: -112px;
+    top: -80px;
   }
-  @media screen and (max-width: 469px) {
-    top: -145px;
+  @media screen and (max-width: 768px) {
+    top: -63px;
   }
 `;
 
@@ -95,7 +103,7 @@ const WorkSlider = () => {
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 1.8,
+            slidesPerView: 2.2,
             spaceBetween: 25,
           },
           1024: {

@@ -14,12 +14,43 @@ const Container = styled.section`
   /* min-height: 100vh; */
   position: relative;
   z-index: 6;
+  @media screen and (max-width: 1600px) {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 100px;
+  }
+  @media screen and (max-width: 1024px) {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 90px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 80px;
+  }
 `;
 
 const SubTitle = styled.h3`
+  margin-top: 20px;
   font-size: 4.5rem;
   font-weight: 400;
-  margin-top: 20px;
+  word-break: keep-all;
+  line-height: 1.2;
+  @media screen and (max-width: 1600px) {
+    margin-top: 18px;
+    font-size: 3.8rem;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 3rem;
+    margin-top: 16px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+    margin-top: 14px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.8rem;
+    margin-top: 12px;
+  }
 `;
 
 const Process = () => {

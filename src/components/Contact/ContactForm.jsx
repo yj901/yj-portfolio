@@ -6,19 +6,45 @@ import SwapBtn from "../SwapBtn";
 
 const Container = styled.form`
   /* border: 1px solid #f00; */
-  width: 62%;
-  margin-right: 50px;
+  width: 67%;
+  margin-right: 40px;
   position: relative;
+  @media screen and (max-width: 1024px) {
+    margin-right: 0px;
+    width: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 50px 0;
+  }
 `;
 
 const TopWrap = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 56px;
+  @media screen and (max-width: 1024px) {
+    gap: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    gap: 30px;
+  }
+  @media screen and (max-width: 500px) {
+    gap: 20px;
+  }
 `;
 
 const BottomWrap = styled.div`
-  margin-top: 70px;
+  margin: 70px 0 40px;
+  @media screen and (max-width: 1600px) {
+    margin: 45px 0 25px;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 35px 0 20px;
+  }
+  @media screen and (max-width: 500px) {
+    margin: 25px 0 20px;
+  }
 `;
 
 const InputStyle = styled.div`
@@ -75,11 +101,62 @@ const InputStyle = styled.div`
     font-size: 1.4rem;
     opacity: 0.8;
     font-weight: 300;
+    margin-top: -5px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    gap: 20px;
+    label {
+      font-size: 2rem;
+    }
+    input,
+    textarea {
+      font-size: 1.5rem;
+    }
+    textarea {
+      height: 95px;
+    }
+    span {
+      font-size: 1.3rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    gap: 18px;
+    label {
+      font-size: 1.8rem;
+    }
+    input,
+    textarea {
+      font-size: 1.4rem;
+      padding-bottom: 12px;
+    }
+    textarea {
+      height: 90px;
+    }
+    span {
+      font-size: 1.25rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    gap: 15px;
+    label {
+      font-size: 1.6rem;
+    }
+    input,
+    textarea {
+      font-size: 1.3rem;
+    }
+    textarea {
+      height: 80px;
+    }
+    span {
+      font-size: 1.2rem;
+      margin-top: -6px;
+    }
   }
 `;
 
 const BtnWrap = styled.div`
-  margin-top: 40px;
   display: flex;
   justify-content: flex-end;
 `;
@@ -89,6 +166,19 @@ const SuccessMessage = styled.p`
   position: absolute;
   opacity: ${({ $visible }) => ($visible ? 1 : 0)};
   transition: opacity 0.5s ease-in-out;
+  @media screen and (max-width: 1600px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 1.4rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.2rem;
+    margin-top: -18px;
+  }
 `;
 
 const ContactForm = () => {
@@ -131,7 +221,7 @@ const ContactForm = () => {
     <Container ref={form} onSubmit={handleSubmit(sendEmail)}>
       <TopWrap>
         <InputStyle>
-          <label>NAME</label>
+          <label for="user_name">NAME</label>
           <input
             type="text"
             name="user_name"
@@ -143,7 +233,7 @@ const ContactForm = () => {
           <span>{errors?.user_name?.message}</span>
         </InputStyle>
         <InputStyle>
-          <label>EMAIL</label>
+          <label for="user_email">EMAIL</label>
           <input
             type="email"
             name="user_email"
@@ -157,7 +247,7 @@ const ContactForm = () => {
       </TopWrap>
       <BottomWrap>
         <InputStyle>
-          <label>MESSAGE</label>
+          <label name="message">MESSAGE</label>
           <textarea
             name="message"
             placeholder="내용을 입력해주세요"

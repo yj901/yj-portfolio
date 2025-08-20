@@ -15,7 +15,7 @@ const skillsData = [
     category: "Frontend",
     skill: "React",
     desc: "컴포넌트 기반 구조로 화면을 구성하고.",
-    tags: ["Hooks", "React Router"],
+    tags: ["Hooks", "React Router", "React RouterReact Router"],
   },
   {
     category: "Frontend",

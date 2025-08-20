@@ -5,7 +5,7 @@ import useNavStore from "../../store/navStore";
 
 const Container = styled.div`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
   }
 `;
@@ -92,9 +92,11 @@ const MobileMenu = () => {
     setMobileMenuOpen((prev) => !prev);
   };
 
-  const handleMenuClick = (sectionId) => {
-    // scrollToSection(sectionId);
-    setMobileMenuOpen(false);
+  const handleMenuClick = (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (a) {
+      setMobileMenuOpen(false);
+    }
   };
 
   return (
@@ -106,16 +108,35 @@ const MobileMenu = () => {
         <span></span>
         <span></span>
       </MenuBtn>
-      <MenuModal className={mobileMenuOpen ? "active" : ""}>
+      <MenuModal
+        className={mobileMenuOpen ? "active" : ""}
+        onClick={handleMenuClick}
+      >
         <Gnb>
-          <li onClick={() => handleMenuClick("cover")}>COVER</li>
-          <li onClick={() => handleMenuClick("about")}>ABOUT</li>
-          <li onClick={() => handleMenuClick("project")}>PROJECT</li>
-          <li onClick={() => handleMenuClick("team")}>TEAM</li>
-          <li onClick={() => handleMenuClick("work")}>WORK</li>
-          <li onClick={() => handleMenuClick("skills")}>SKILLS</li>
-          <li onClick={() => handleMenuClick("process")}>PROCESS</li>
-          <li onClick={() => handleMenuClick("contact")}>CONTACT</li>
+          <li>
+            <a href="#cover">COVER</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#project">PROJECT</a>
+          </li>
+          <li>
+            <a href="#team">TEAM</a>
+          </li>
+          <li>
+            <a href="#work">WORK</a>
+          </li>
+          <li>
+            <a href="#skills">SKILLS</a>
+          </li>
+          <li>
+            <a href="#process">PROCESS</a>
+          </li>
+          <li>
+            <a href="#contact">CONTACT</a>
+          </li>
         </Gnb>
       </MenuModal>
     </Container>

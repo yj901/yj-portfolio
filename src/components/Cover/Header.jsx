@@ -75,14 +75,14 @@ const Gnb = styled.ul`
       font-size: 1.5rem;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
 
 const BtnWrap = styled.div`
   position: relative;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;

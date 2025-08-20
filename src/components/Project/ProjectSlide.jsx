@@ -23,9 +23,12 @@ const SliderSection = styled.section`
     margin-left: 3%;
     margin-right: 110px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     margin-left: 3%;
     margin-right: 3%;
+    .swiper {
+      overflow: visible;
+    }
   }
 `;
 
@@ -59,8 +62,11 @@ const SlideArrWrap = styled.div`
     transform: translateY(-0%);
     top: -112px;
   }
+  @media screen and (max-width: 500px) {
+    top: -108px;
+  }
   @media screen and (max-width: 469px) {
-    top: -145px;
+    top: -141px;
   }
 `;
 
@@ -118,7 +124,7 @@ const ProjectSlide = () => {
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 1.9,
+              slidesPerView: 2.2,
               spaceBetween: 25,
             },
             1024: {

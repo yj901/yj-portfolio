@@ -15,11 +15,7 @@ const Container = styled.nav`
   @media screen and (max-width: 1400px) {
     right: 12px;
   }
-  @media screen and (max-width: 768px) {
-    right: 5px;
-    display: none;
-  }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
@@ -48,6 +44,17 @@ const Gnb = styled.ul`
     justify-content: center;
     width: 28px;
     height: 28px;
+    span {
+      background: var(--gray41);
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+      @media screen and (max-width: 768px) {
+        width: 2px;
+        height: 2px;
+      }
+    }
     @media screen and (max-width: 768px) {
       width: 22px;
       height: 22px;
@@ -134,16 +141,6 @@ const Gnb = styled.ul`
         @media screen and (max-width: 768px) {
           display: none;
         }
-      }
-    }
-    span {
-      background: var(--gray41);
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      @media screen and (max-width: 768px) {
-        width: 2px;
-        height: 2px;
       }
     }
   }

@@ -30,11 +30,13 @@ const SliderSection = styled.section`
     margin-top: 40px;
     padding-right: 90px;
   }
+  @media screen and (max-width: 1024px) {
+    padding-right: 0px;
+  }
   @media screen and (max-width: 768px) {
     margin-top: 30px;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-right: 0px;
     gap: 20px;
   }
 
@@ -173,6 +175,7 @@ const SildeWrap = styled.div`
     }
   }
   @media screen and (max-width: 1024px) {
+    width: 48%;
     .swiper-wrapper {
       padding-bottom: 24px;
       img {
@@ -209,6 +212,9 @@ const TextWrap = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 1880px) {
     width: 45%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 47%;
   }
   @media screen and (max-width: 768px) {
     width: 100%;

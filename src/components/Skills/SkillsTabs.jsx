@@ -6,6 +6,18 @@ const TabWrapper = styled.div`
   gap: 16px;
   margin-bottom: 40px;
   flex-wrap: wrap;
+  @media screen and (max-width: 1600px) {
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+  @media screen and (max-width: 1024px) {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
 `;
 
 const TabButton = styled.button`
@@ -21,6 +33,18 @@ const TabButton = styled.button`
   &:hover {
     background: var(--gray19);
     color: var(--light);
+  }
+  @media screen and (max-width: 1600px) {
+    padding: 8px 20px;
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 6px 16px;
+    font-size: 1.4rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 4px 14px;
+    font-size: 1.3rem;
   }
 `;
 
