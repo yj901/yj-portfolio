@@ -30,26 +30,26 @@ const Container = styled.section`
 `;
 
 const SubTitle = styled.h3`
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 4.5rem;
   font-weight: 400;
   word-break: keep-all;
   line-height: 1.2;
   @media screen and (max-width: 1600px) {
-    margin-top: 18px;
     font-size: 3.8rem;
+    margin-top: 20px;
   }
   @media screen and (max-width: 1024px) {
     font-size: 3rem;
-    margin-top: 16px;
+    margin-top: 18px;
   }
   @media screen and (max-width: 768px) {
     font-size: 2.5rem;
-    margin-top: 14px;
+    margin-top: 15px;
   }
   @media screen and (max-width: 500px) {
     font-size: 1.8rem;
-    margin-top: 12px;
+    margin-top: 10px;
   }
 `;
 

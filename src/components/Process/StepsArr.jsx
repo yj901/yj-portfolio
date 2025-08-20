@@ -130,7 +130,7 @@ const Step = styled.div`
       font-size: 1.5rem;
     }
     p {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       line-height: 1.4;
       br {
         display: none;
