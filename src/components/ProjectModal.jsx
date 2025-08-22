@@ -4,6 +4,7 @@ import styled from "styled-components";
 import lenis from "../utils/lenis";
 import { X, ArrowRight } from "lucide-react";
 import Github from "./Github";
+import TechAccordion from "./TechAccordion";
 
 const Overlay = styled.div`
   position: fixed;
@@ -81,6 +82,7 @@ const Paragraph = styled.p`
   font-size: 1.8rem;
   margin: 40px 0;
   line-height: 1.6;
+  white-space: pre-line;
 `;
 
 const LinkBtns = styled.div`
@@ -114,6 +116,12 @@ const SubTitle = styled.h4`
   font-weight: 700;
 `;
 
+const FeatureList = styled.ul`
+  margin: 20px 0;
+  padding-left: 20px;
+  list-style: disc;
+`;
+
 const TechStack = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -127,10 +135,48 @@ const TechStack = styled.ul`
   }
 `;
 
-const FeatureList = styled.ul`
+const ContribList = styled.ul`
   margin: 20px 0;
-  padding-left: 20px;
-  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  li {
+    strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin: 0;
+    }
+  }
+`;
+
+const TroubleList = styled.ul`
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  li {
+    strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin: 0;
+    }
+  }
 `;
 
 const ProjectModal = ({ data, onClose }) => {
@@ -162,6 +208,7 @@ const ProjectModal = ({ data, onClose }) => {
           <TextWrap>
             <Title>{data.title}</Title>
             <Type>
+              {data.type === "팀" && data.size && `${data.size}인 `}
               {data.type} 프로젝트 · 제작시기 {data.date} · 제작기간{" "}
               {data.duration}
             </Type>
@@ -180,19 +227,43 @@ const ProjectModal = ({ data, onClose }) => {
               )}
             </LinkBtns>
 
-            <SubTitle>사용 기술 및 언어</SubTitle>
-            <TechStack>
-              {data.techStack.map((tech, i) => (
-                <li key={i}>{tech}</li>
-              ))}
-            </TechStack>
-
             <SubTitle>주요 기능 및 특징</SubTitle>
             <FeatureList>
               {data.features.map((f, i) => (
                 <li key={i}>{f}</li>
               ))}
             </FeatureList>
+
+            <SubTitle>사용 기술 및 언어</SubTitle>
+            <TechAccordion techDetails={data.techDetails} />
+
+            {data.type === "팀" && data.contributions && (
+              <>
+                <SubTitle>담당 역할 및 기여도</SubTitle>
+                <ContribList>
+                  {data.contributions.map((c, i) => (
+                    <li key={i}>
+                      <strong>{c.title}</strong>
+                      <p>{c.desc}</p>
+                    </li>
+                  ))}
+                </ContribList>
+              </>
+            )}
+
+            {data.troubleshooting && data.troubleshooting.length > 0 && (
+              <>
+                <SubTitle>트러블슈팅</SubTitle>
+                <TroubleList>
+                  {data.troubleshooting.map((t, i) => (
+                    <li key={i}>
+                      <strong>{t.title}</strong>
+                      <p>{t.desc}</p>
+                    </li>
+                  ))}
+                </TroubleList>
+              </>
+            )}
           </TextWrap>
 
           <ImagesWrap>
