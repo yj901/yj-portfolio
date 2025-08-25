@@ -29,16 +29,16 @@ const ModalBox = styled.div`
   background: var(--light);
   word-break: keep-all;
   @media screen and (max-width: 1400px) {
-    padding: 55px;
+    padding: 50px;
   }
   @media screen and (max-width: 1024px) {
-    padding: 48px;
+    padding: 42px;
   }
   @media screen and (max-width: 768px) {
-    padding: 40px;
+    padding: 36px;
   }
   @media screen and (max-width: 500px) {
-    padding: 32px;
+    padding: 26px;
     width: 92%;
   }
 `;
@@ -383,6 +383,7 @@ const ContribList = styled.ul`
       padding: 16px;
       h5 {
         font-size: 1.55rem;
+        margin-bottom: 8px;
       }
       p {
         font-size: 1.35rem;
@@ -399,7 +400,7 @@ const ContribList = styled.ul`
       padding: 14px;
       h5 {
         font-size: 1.45rem;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
       p {
         font-size: 1.3rem;
@@ -458,6 +459,7 @@ const TroubleList = styled.ul`
       padding: 16px;
       h5 {
         font-size: 1.55rem;
+        margin-bottom: 8px;
       }
       p {
         font-size: 1.35rem;
@@ -474,7 +476,7 @@ const TroubleList = styled.ul`
       padding: 14px;
       h5 {
         font-size: 1.45rem;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
       p {
         font-size: 1.3rem;

@@ -31,7 +31,7 @@ const Tit = styled.div`
   justify-content: space-between;
   align-items: center;
   h5 {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
     font-weight: 600;
   }
   svg {
@@ -48,7 +48,7 @@ const Tit = styled.div`
   }
   @media screen and (max-width: 1024px) {
     h5 {
-      font-size: 1.55rem;
+      font-size: 1.5rem;
     }
     svg {
       width: 18px;
@@ -56,7 +56,7 @@ const Tit = styled.div`
   }
   @media screen and (max-width: 768px) {
     h5 {
-      font-size: 1.45rem;
+      font-size: 1.4rem;
     }
     svg {
       width: 16px;
@@ -71,7 +71,7 @@ const Panel = styled.div`
 `;
 const Body = styled.div`
   overflow: hidden;
-  padding: ${({ $open }) => ($open ? "8px 0 0" : "0")};
+  padding: ${({ $open }) => ($open ? "6px 0 0" : "0")};
   transition: padding 0.28s ease, opacity 0.2s ease;
   opacity: ${({ $open }) => ($open ? 1 : 0)};
   font-size: 1.5rem;
@@ -79,7 +79,7 @@ const Body = styled.div`
   color: var(--gray5);
   @media screen and (max-width: 1400px) {
     font-size: 1.45rem;
-    padding: ${({ $open }) => ($open ? "6px 0 0" : "0")};
+    padding: ${({ $open }) => ($open ? "5px 0 0" : "0")};
   }
   @media screen and (max-width: 1024px) {
     font-size: 1.4rem;
