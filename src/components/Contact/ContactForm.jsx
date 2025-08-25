@@ -221,7 +221,7 @@ const ContactForm = () => {
     <Container ref={form} onSubmit={handleSubmit(sendEmail)}>
       <TopWrap>
         <InputStyle>
-          <label for="user_name">NAME</label>
+          <label htmlFor="user_name">NAME</label>
           <input
             type="text"
             name="user_name"
@@ -233,7 +233,7 @@ const ContactForm = () => {
           <span>{errors?.user_name?.message}</span>
         </InputStyle>
         <InputStyle>
-          <label for="user_email">EMAIL</label>
+          <label htmlFor="user_email">EMAIL</label>
           <input
             type="email"
             name="user_email"
@@ -247,7 +247,7 @@ const ContactForm = () => {
       </TopWrap>
       <BottomWrap>
         <InputStyle>
-          <label name="message">MESSAGE</label>
+          <label htmlFor="message">MESSAGE</label>
           <textarea
             name="message"
             placeholder="내용을 입력해주세요"

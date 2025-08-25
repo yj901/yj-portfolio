@@ -46,6 +46,9 @@ const MenuBtn = styled.div`
       }
     }
   }
+  @media screen and (max-width: 500px) {
+    top: 18px;
+  }
 `;
 
 const MenuModal = styled.div`
@@ -73,7 +76,7 @@ const Gnb = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 3.4vw;
-  font-size: 5vw;
+  font-size: 5.2vw;
   font-weight: 500;
   li {
     cursor: pointer;
@@ -83,11 +86,6 @@ const Gnb = styled.ul`
 const MobileMenu = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // const current = useNavStore((state) => state.currentSection);
-  // const darkSections = ["cover", "team", "contact"];
-  // const isDark = darkSections.includes(current);
-
-  //mobile 메뉴 토글
   const handleClickMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev);
   };

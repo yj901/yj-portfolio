@@ -3,6 +3,7 @@ const skillsData = [
     category: "Frontend",
     skill: "React",
     desc: "컴포넌트 기반 구조로 화면을 구성하고, hooks와 Router를 활용한 SPA 개발 경험이 있습니다.",
+    icon: "react",
     tags: ["Hooks", "SPA", "React Router"],
   },
   {

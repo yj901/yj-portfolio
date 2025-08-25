@@ -14,20 +14,9 @@ const Container = styled.header`
   }
   @media screen and (max-width: 768px) {
     padding-top: 20px;
-    /* position: fixed;
-    z-index: 7000;
-    &::before {
-      content: "";
-      display: block;
-      position: fixed;
-      width: 100%;
-      height: 50px;
-      top: 0;
-      left: 0;
-      background: rgba(255, 255, 255, 0.0001);
-      backdrop-filter: blur(10px);
-      z-index: -1;
-    } */
+  }
+  @media screen and (max-width: 500px) {
+    padding-top: 15px;
   }
 `;
 

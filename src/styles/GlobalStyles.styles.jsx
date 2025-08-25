@@ -35,17 +35,20 @@ const GlobalStyles = createGlobalStyle`
     --contactbg: #1B232D;
     --gray1: #111;
     --gray2: #222;
+    --gray3: #333;
     --gray5: #555;
     --gray9: #999;
-    --grayd1: #d1d1d1;
-    --gray41: #414141;
     --gray19: #191D31;
     --gray2b: #2B2C35;
-    --gray98: #9898AA;
+    --gray41: #414141;
     --gray8b: #8b8b8b;
-    --graybb: #BBBAD0;
+    --gray98: #9898AA;
     --skyarr: #AEEBFF;
+    --graybb: #BBBAD0;
+    --grayd1: #d1d1d1;
     --light2: #F3F4F6;
+    --check: #42A5F5;
+    --check2: #2962FF;
 
   }
 

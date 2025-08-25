@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Title from "../components/Title";
 import SkillsTabs from "../components/Skills/SkillsTabs";
 import skillsData from "../data/skillsData";
+import { ICONS } from "../assets/skills";
 
 const Container = styled.section`
   background: var(--skillsbg);
@@ -142,6 +143,50 @@ const SkillDesc = styled.div`
   }
 `;
 
+const TitWrap = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media screen and (max-width: 1024px) {
+    gap: 6px;
+  }
+`;
+
+const Icon = styled.div`
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray19);
+  border-radius: 50%;
+  img {
+    width: 25px;
+    aspect-ratio: 1;
+  }
+  @media screen and (max-width: 1600px) {
+    img {
+      width: 24px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 5px;
+    img {
+      width: 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    img {
+      width: 18px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    padding: 4px;
+    img {
+      width: 16px;
+    }
+  }
+`;
+
 const Tit = styled.h4`
   font-size: 2.6rem;
   font-weight: 600;
@@ -228,36 +273,32 @@ const Skills = () => {
         <SubTitle>이런 기술들을 사용해보았습니다.</SubTitle>
         <SkillsTabs selectedTab={selectedTab} onSelectTab={setSelectedTab} />
         <SkillsList>
-          {filtered.map((data, index) => (
-            <li key={`${data.category}-${index}`}>
-              <Number>{index + 1 < 10 ? "0" + (index + 1) : index + 1}</Number>
-              <SkillDesc>
-                <Tit>{data.skill}</Tit>
-                <Desc>{data.desc}</Desc>
-              </SkillDesc>
-              <Tags>
-                {data.tags.map((tag, index) => (
-                  <li key={`${tag}-${index}`}>#{tag}</li>
-                ))}
-              </Tags>
-            </li>
-          ))}
-          {/* <li>
-            <Number>01</Number>
-            <SkillDesc>
-              <Tit>React</Tit>
-              <Desc>
-                컴포넌트 어쩌구 컴포넌트어
-                <br />
-                컴포넌트 어쩌구 컴포넌트 어쩌구
-              </Desc>
-            </SkillDesc>
-            <Tags>
-              <li>Hooks</li>
-              <li>Hooks</li>
-              <li>Hooks</li>
-            </Tags>
-          </li> */}
+          {filtered.map((data, index) => {
+            const iconSrc = ICONS[data.icon];
+            return (
+              <li key={`${data.category}-${index}`}>
+                <Number>
+                  {index + 1 < 10 ? "0" + (index + 1) : index + 1}
+                </Number>
+                <SkillDesc>
+                  <TitWrap>
+                    <Tit>{data.skill}</Tit>
+                    {iconSrc && (
+                      <Icon>
+                        <img src={iconSrc} alt="icon" aria-hidden="true" />
+                      </Icon>
+                    )}
+                  </TitWrap>
+                  <Desc>{data.desc}</Desc>
+                </SkillDesc>
+                <Tags>
+                  {data.tags.map((tag, index) => (
+                    <li key={`${tag}-${index}`}>#{tag}</li>
+                  ))}
+                </Tags>
+              </li>
+            );
+          })}
         </SkillsList>
       </div>
     </Container>
