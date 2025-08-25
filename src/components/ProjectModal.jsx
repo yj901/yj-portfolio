@@ -269,7 +269,7 @@ const SubTitle = styled.h4`
   }
   @media screen and (max-width: 500px) {
     margin: 42px 0 14px;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 `;
 
@@ -383,8 +383,8 @@ const ContribList = styled.ul`
     li {
       padding: 16px;
       h5 {
-        font-size: 1.55rem;
-        margin-bottom: 8px;
+        font-size: 1.5rem;
+        margin-bottom: 7px;
       }
       p {
         font-size: 1.35rem;
@@ -400,7 +400,7 @@ const ContribList = styled.ul`
     li {
       padding: 14px;
       h5 {
-        font-size: 1.45rem;
+        font-size: 1.4rem;
         margin-bottom: 6px;
       }
       p {
@@ -459,8 +459,8 @@ const TroubleList = styled.ul`
     li {
       padding: 16px;
       h5 {
-        font-size: 1.55rem;
-        margin-bottom: 8px;
+        font-size: 1.5rem;
+        margin-bottom: 7px;
       }
       p {
         font-size: 1.35rem;
@@ -476,7 +476,7 @@ const TroubleList = styled.ul`
     li {
       padding: 14px;
       h5 {
-        font-size: 1.45rem;
+        font-size: 1.4rem;
         margin-bottom: 6px;
       }
       p {
