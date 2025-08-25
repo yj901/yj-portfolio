@@ -36,9 +36,10 @@ const ModalBox = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 36px;
+    border-radius: 16px;
   }
   @media screen and (max-width: 500px) {
-    padding: 26px;
+    padding: 28px;
     width: 92%;
   }
 `;
@@ -52,11 +53,11 @@ const CloseBtn = styled.button`
   cursor: pointer;
   padding: 0;
   @media screen and (max-width: 768px) {
-    top: 14px;
-    right: 14px;
+    top: 10px;
+    right: 10px;
     svg {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
   }
 `;
