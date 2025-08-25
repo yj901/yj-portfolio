@@ -56,8 +56,8 @@ const CloseBtn = styled.button`
     top: 10px;
     right: 10px;
     svg {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
     }
   }
 `;
@@ -278,41 +278,49 @@ const FeatureList = styled.ul`
 
   li {
     display: flex;
-    align-items: center;
-    gap: 6px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 8px;
     p {
       font-size: 1.7rem;
-      line-height: 1.7;
+      line-height: 1.2;
+      width: calc(100% - 26px);
     }
     svg {
       color: var(--check);
       transform: translateY(1px);
+    }
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
   @media screen and (max-width: 1400px) {
     li {
       p {
         font-size: 1.6rem;
+        width: calc(100% - 24px);
       }
     }
   }
   @media screen and (max-width: 1024px) {
     li {
-      gap: 4px;
+      margin-bottom: 7px;
       p {
         font-size: 1.5rem;
-        line-height: 1.6;
+        width: calc(100% - 22px);
       }
       svg {
         width: 17px;
+        transform: translateY(0px);
       }
     }
   }
   @media screen and (max-width: 768px) {
     li {
-      gap: 4px;
+      margin-bottom: 6px;
       p {
         font-size: 1.45rem;
+        width: calc(100% - 20px);
       }
       svg {
         width: 16px;
@@ -321,10 +329,10 @@ const FeatureList = styled.ul`
   }
   @media screen and (max-width: 500px) {
     li {
-      gap: 4px;
+      margin-bottom: 5px;
       p {
         font-size: 1.35rem;
-        line-height: 1.5;
+        width: calc(100% - 18px);
       }
       svg {
         width: 14px;
