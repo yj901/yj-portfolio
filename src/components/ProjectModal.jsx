@@ -343,7 +343,7 @@ const FeatureList = styled.ul`
 
 const ContribList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 15px;
 
   li {
@@ -420,7 +420,7 @@ const ContribList = styled.ul`
 
 const TroubleList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 15px;
 
   li {
@@ -583,6 +583,19 @@ const ProjectModal = ({ data, onClose }) => {
                   <SubTitle>트러블슈팅</SubTitle>
                   <TroubleList>
                     {data.troubleshooting.map((t, i) => (
+                      <li key={i}>
+                        <h5>{t.title}</h5>
+                        <p>{t.desc}</p>
+                      </li>
+                    ))}
+                  </TroubleList>
+                </>
+              )}
+              {data.improvements && data.improvements.length > 0 && (
+                <>
+                  <SubTitle>향후 보완점</SubTitle>
+                  <TroubleList>
+                    {data.improvements.map((t, i) => (
                       <li key={i}>
                         <h5>{t.title}</h5>
                         <p>{t.desc}</p>

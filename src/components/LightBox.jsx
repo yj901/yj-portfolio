@@ -36,7 +36,7 @@ const CloseBtn = styled.button`
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.1);
   color: #fff;
   border: 0;
   padding: 6px 12px;

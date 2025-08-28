@@ -256,7 +256,6 @@ const ProjectIndex = styled.p`
 const ProjectTitle = styled.h3`
   margin: 18px 0;
   font-size: 5rem;
-  font-family: var(--nunito);
   font-weight: 600;
   @media screen and (max-width: 1400px) {
     margin: 15px 0;
