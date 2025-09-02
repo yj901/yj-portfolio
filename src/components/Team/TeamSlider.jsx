@@ -480,7 +480,7 @@ const TeamSlider = () => {
               <TeamDate>Team Project · {teamData[activeIndex].date}</TeamDate>
               <SizePosition>
                 {teamData[activeIndex].size}인 팀 협업 /{" "}
-                {teamData[activeIndex].position} 역할
+                {teamData[activeIndex].position} 담당
               </SizePosition>
               <Desc>{teamData[activeIndex].summary}</Desc>
             </TopWrap>

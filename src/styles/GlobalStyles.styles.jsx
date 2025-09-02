@@ -37,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
     --gray2: #222;
     --gray3: #333;
     --gray5: #555;
+    --gray6: #666;
     --gray9: #999;
     --gray19: #191D31;
     --gray2b: #2B2C35;

@@ -76,7 +76,12 @@ const Body = styled.div`
   opacity: ${({ $open }) => ($open ? 1 : 0)};
   font-size: 1.5rem;
   line-height: 1.5;
-  color: var(--gray5);
+  color: var(--gray3);
+
+  & > div {
+    margin-top: 5px;
+  }
+
   @media screen and (max-width: 1400px) {
     font-size: 1.45rem;
     padding: ${({ $open }) => ($open ? "5px 0 0" : "0")};
@@ -91,6 +96,36 @@ const Body = styled.div`
   }
   @media screen and (max-width: 500px) {
     font-size: 1.3rem;
+  }
+`;
+
+const UsedFor = styled.span`
+  font-size: 1.35rem;
+  color: var(--gray6);
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: var(--gray6);
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 1.3rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.2rem;
+    &::before {
+      width: 2px;
+      height: 2px;
+    }
   }
 `;
 
@@ -118,7 +153,14 @@ const TechAccordion = ({ techDetails }) => {
               <ChevronDownIcon size={20} strokeWidth={2.2} />
             </Tit>
             <Panel $open={open}>
-              <Body $open={open}>{t.summary}</Body>
+              <Body $open={open}>
+                {t.summary}
+                <div>
+                  {t.usedFor.map((used, i) => (
+                    <UsedFor key={`usedFor${i}`}>{used} </UsedFor>
+                  ))}
+                </div>
+              </Body>
             </Panel>
           </Item>
         );

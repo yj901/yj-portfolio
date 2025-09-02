@@ -280,7 +280,7 @@ const FeatureList = styled.ul`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
     p {
       font-size: 1.7rem;
       line-height: 1.2;

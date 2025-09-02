@@ -7,107 +7,167 @@ const teamData = [
     date: "2025.04 ~ 2025.06",
     duration: "2개월",
     size: 6,
-    position: "Frontend (HOME / TEAM HOME / Header, Footer UI)",
+    position: "Frontend (HOME / TEAM HOME / Header · Footer)",
     summary:
       "KBO 하이라이트 기반 OTT+커머스 웹 서비스. 메인 홈, 팀 홈, 공통 UI를 담당하여 콘텐츠 → 커머스로 이어지는 흐름을 설계.",
     category: ["React", "JavaScript", "UI/UX"],
     thumbnail: "/images/thumb/rookie-thumb.jpg",
-    fullDescription: `ROOKie는 KBO 야구 팬을 위한 하이라이트 큐레이션과 굿즈 커머스를 결합한 서비스입니다.
-저는 메인 HOME, TEAM HOME(업커밍 매치/구단별 영상/인플루언서 존), 공통 UI(헤더/푸터/탑 스케줄)를 구현했습니다.
-YouTube Data API와 React Query를 사용해 영상 데이터를 캐싱·표출하고, 팀/플레이리스트 기반으로 슬라이드 UI를 구성했습니다.`,
+    fullDescription: `ROOKie는 KBO 야구 팬을 위한 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 웹 서비스입니다. 팬들이 원하는 순간의 영상을 빠르게 즐기고, 관련 굿즈로 자연스럽게 이어지는 경험을 제공하는 것을 목표로 했습니다.  
+저는 메인 HOME 페이지와 TEAM HOME(업커밍 매치, 구단별 영상, 인플루언서 존), 공통 UI(Header, Footer, TopSchedule)를 구현했습니다. 또한 YouTube Data API와 React Query를 활용해 영상 데이터를 캐싱·표출하고, 팀별/플레이리스트 기반으로 슬라이드 UI를 구성했습니다.
+`,
     features: [
-      // HOME
-      "HOME: 로그인 여부에 따라 MyhomeMainSlide / MainSlide 분기",
-      "HOME: ShortsSlide, PlaySlidewithTabs, RankingTable, PopularPlayer, CollaboBanner 배치",
-      // TEAM HOME
-      "TEAM HOME: UpcomingMatch(경기 일정), 구단별 영상 섹션(영상 모아보기/팀 클립), InfluencerZone 구현",
-      "TEAM HOME: InfluencerZone에서 인플루언서별 영상/프로필/연동 상품 UI 구성",
-      // COMMON UI
-      "Header: 메인 내비게이션, 팀 모드 토글, 모바일 메뉴/스토어 드롭다운, 검색창 UI/토글",
-      "TopSchedule: KBO 일정 JSON 기반 3일 스케줄 박스 + 접힘/펼침",
-      "Footer: 페이지별 테마 대응 및 반응형",
+      // // HOME
+      // "HOME: 로그인 여부에 따라 MyhomeMainSlide / MainSlide 분기",
+      // "HOME: ShortsSlide, PlaySlidewithTabs, RankingTable, PopularPlayer, CollaboBanner 배치",
+      // // TEAM HOME
+      // "TEAM HOME: UpcomingMatch(경기 일정), 구단별 영상 섹션(영상 모아보기/팀 클립), InfluencerZone 구현",
+      // "TEAM HOME: InfluencerZone에서 인플루언서별 영상/프로필/연동 상품 UI 구성",
+      // // COMMON UI
+      // "Header: 메인 내비게이션, 팀 모드 토글, 모바일 메뉴/스토어 드롭다운, 검색창 UI/토글",
+      // "TopSchedule: KBO 일정 JSON 기반 3일 스케줄 박스 + 접힘/펼침",
+      // "Footer: 페이지별 테마 대응 및 반응형",
+      "HOME: 로그인/비로그인 분기, 리그 순위·인기 굿즈 큐레이션",
+      "TEAM HOME: 구단별 경기/클립/굿즈/인플루언서 콘텐츠 제공",
+      "PLAY: 주간 하이라이트·팀별/인플루언서 영상 큐레이션",
+      "PLAY DETAIL: 유튜브 재생, 좋아요·댓글, 굿즈 추천",
+      "CLIP DETAIL: 풀스크린 9:16 모달 뷰어, 좋아요·상품 연동",
+      "STORE: 구단/인플루언서/KBO 굿즈 카테고리 및 필터링",
+      "PRODUCT DETAIL: 상품 정보·구매 버튼·리뷰/문의, 구매내역 반영",
+      "CART & PAYMENT: 장바구니 모달, 쿠폰 사용·결제 흐름 구현",
+      "EVENT PAGE: GSAP 인터랙션, 로그인 시 마스코트·쿠폰 발급",
+      "AUTH: Firebase 로그인/회원가입, 구단 선택·주소 등록",
+      "MYPAGE: 쇼핑내역·좋아요 영상·프로필 관리",
     ],
     techStack: [
       "React",
       "Vite",
-      "React Router",
-      "styled-components",
       "Zustand",
-      "Swiper",
-      "React Query (TanStack Query)",
+      "React Query",
       "YouTube Data API v3",
-      "Axios",
+      "styled-components",
+      "GSAP",
+      "Firebase",
     ],
     techDetails: [
       {
         name: "React",
         summary:
-          "홈/팀홈/공통 UI를 컴포넌트 단위로 구조화, 상태 기반 조건 렌더링.",
-        usedFor: ["HOME/TEAM HOME 섹션 컴포넌트", "Header/TopSchedule/Footer"],
-      },
-      {
-        name: "React Router",
-        summary: "팀 라우팅 및 경로별 UI 분기.",
-        usedFor: ["useParams(teamCode) 기반 팀홈 렌더링", "내비게이션 라우트"],
-      },
-      {
-        name: "styled-components",
-        summary: "반응형/테마 토큰화, 컴포넌트 캡슐화.",
-        usedFor: ["슬라이드 카드/배치 레이아웃", "Header/Footer 스타일"],
-      },
-      {
-        name: "Zustand",
-        summary: "헤더 높이/접힘·검색·팀모드 등 전역 UI 상태 관리.",
-        usedFor: ["useHeaderStore", "useToggleStore", "useSearchStore"],
-      },
-      {
-        name: "Swiper",
-        summary: "영상/콘텐츠 슬라이드 구현 및 브레이크포인트 대응.",
-        usedFor: ["메인/팀홈 영상 슬라이드"],
-      },
-      {
-        name: "React Query",
-        summary: "YouTube 플레이리스트/비디오 디테일 데이터 fetch & cache.",
+          "메인 홈, 팀 홈, 공통 UI를 컴포넌트 단위로 구조화하고 상태에 따라 조건부 렌더링을 구현.",
         usedFor: [
-          "useYoutubePlaylist",
-          "useHighlightVideos",
-          "useYoutubeVideoDetails",
+          "HOME/TEAM HOME/공통 UI 컴포넌트 구성",
+          "상품·영상 상세 페이지 라우팅 기반 구성",
         ],
       },
       {
-        name: "YouTube Data API v3",
-        summary: "하이라이트/팀 클립 등 영상 데이터 수집.",
-        usedFor: ["플레이리스트/비디오 디테일 조회", "팀별 영상 섹션"],
+        name: "Vite",
+        summary:
+          "개발 서버 환경과 번들링을 제공하여 빠른 빌드와 효율적인 개발 환경을 구축.",
+        usedFor: ["빠른 개발 서버 환경 세팅"],
+      },
+      {
+        name: "React Router",
+        summary:
+          "경로와 파라미터를 기반으로 페이지를 분기하고, 팀 홈·영상 상세·상품 상세 페이지로의 이동을 제어.",
+        usedFor: [
+          "useParams(teamCode) 기반 팀 홈 페이지 렌더링",
+          "영상/상품 상세 페이지 라우트 구현",
+        ],
+      },
+      {
+        name: "Zustand",
+        summary:
+          "전역 상태를 관리하여 헤더, 검색창, 팀 모드 등 공통 UI 동작을 일관성 있게 유지.",
+        usedFor: [
+          "헤더 높이·검색창 토글·팀 모드 전환 상태 관리",
+          "페이지 간 공통 상태 공유",
+        ],
+      },
+      {
+        name: "React Query",
+        summary:
+          "비동기 데이터 fetching과 캐싱을 최적화하여 YouTube API 호출 시 응답성을 향상.",
+        usedFor: [
+          "YouTube 플레이리스트/비디오 데이터 요청 관리",
+          "중복 요청 방지 및 캐싱 처리",
+        ],
       },
       {
         name: "Axios",
-        summary: "YouTube API 호출 유틸.",
-        usedFor: ["플레이리스트/비디오 디테일 요청"],
+        summary:
+          "API 요청을 단순화하는 유틸로, React Query 훅 내부에서 YouTube API를 호출하는 데 사용.",
+        usedFor: ["YouTube API 요청 처리", "데이터 fetch 유틸 작성"],
+      },
+      {
+        name: "YouTube Data API v3",
+        summary:
+          "공식 API를 활용해 하이라이트/클립 영상 데이터를 수집하고 팀별 콘텐츠를 구성.",
+        usedFor: [
+          "플레이리스트/비디오 상세 데이터 연동",
+          "팀별 영상 섹션 구성",
+        ],
+      },
+
+      {
+        name: "styled-components",
+        summary:
+          "컴포넌트 단위 스타일링으로 UI를 모듈화하고, 미디어 쿼리를 활용해 다양한 해상도에 대응.",
+        usedFor: [
+          "공통 Header/Footer 스타일 설계",
+          "슬라이드 카드 및 레이아웃 반응형 구현",
+        ],
+      },
+      {
+        name: "GSAP",
+        summary:
+          "애니메이션 라이브러리로 이벤트 페이지의 마우스 인터랙션 배경을 구현해 사용자 경험을 강화.",
+        usedFor: ["이벤트 페이지 배경 인터랙션", "전환 애니메이션"],
+      },
+      {
+        name: "Firebase",
+        summary:
+          "인증, 데이터베이스, 호스팅을 통합 제공해 회원 관리부터 구매 내역 저장, 프로젝트 배포까지 처리.",
+        usedFor: [
+          "회원가입·로그인(Firebase Auth)",
+          "구매내역·쿠폰 관리(Firestore)",
+          "프로젝트 Hosting 배포",
+        ],
+      },
+      {
+        name: "Netlify Functions",
+        summary:
+          "서버리스 환경에서 상품 데이터를 API로 제공해 프론트엔드와 데이터 연동을 가능하게 함.",
+        usedFor: ["상품 데이터를 크롤링 후 API화", "프론트엔드 fetch 연동"],
+      },
+      {
+        name: "Kakao 주소 API",
+        summary:
+          "주소 검색과 자동 입력 기능을 제공해 회원가입 및 배송지 등록 과정을 간편화.",
+        usedFor: [
+          "회원가입 시 배송지 등록",
+          "마이페이지 프로필 수정 기능 연동",
+        ],
       },
     ],
     contributions: [
       {
         title: "HOME 페이지 구성",
-        desc: "로그인 여부에 따른 메인 슬라이드 분기(MyhomeMainSlide/MainSlide)와 Shorts/Play 탭·랭킹/인기 선수/콜라보 배너 등 주요 섹션 배치.",
+        desc: "로그인 여부에 따라 메인 슬라이드를 MyhomeMainSlide/MainSlide로 분기하고 Shorts/Play 탭, 랭킹, 인기 선수, 콜라보 배너 등 주요 섹션을 배치했습니다. 이를 통해 사용자가 개인화된 콘텐츠와 리그 전체 콘텐츠를 명확히 구분해 경험할 수 있도록 했습니다.",
       },
-      // TEAM HOME
       {
         title: "TEAM HOME – 경기/영상/인플루언서 섹션",
-        desc: "UpcomingMatch(경기 일정)과 구단별 영상(PlaySlidewithTabs/ShortsSlide) 및 InfluencerZone(다중 렌더링 포함) 구현.",
+        desc: "UpcomingMatch(경기 일정), 구단별 영상(PlaySlidewithTabs/ShortsSlide), InfluencerZone을 구현했습니다. 팬들이 각 구단의 최신 경기와 영상을 한눈에 확인하고 인플루언서 콘텐츠까지 연결해 즐길 수 있도록 구성했습니다.",
       },
       {
         title: "InfluencerZone – 인플루언서 연동 UI",
-        desc: "인플루언서 JSON 기반으로 프로필·영상·연동 상품을 조건부 렌더링하여 팀 페이지 내 팬 콘텐츠 허브 구성.",
+        desc: "인플루언서 JSON 데이터를 기반으로 프로필, 영상, 연동 상품을 조건부로 렌더링했습니다. 이를 통해 팀 페이지 내에서 다양한 인플루언서 중심의 팬 콘텐츠 허브 역할을 하도록 구현했습니다.",
       },
-      // COMMON UI
       {
         title: "Header / TopSchedule / Footer",
-        desc: "메인 내비·팀 모드 토글·모바일 메뉴/스토어 드롭다운·검색창 UI/토글 구현. 실제 검색 로직은 제외. KBO 일정 JSON 연동 TopSchedule 접힘/펼침, Footer 테마 대응.",
+        desc: "메인 내비게이션, 팀 모드 토글, 모바일 메뉴, 스토어 드롭다운, 검색창 UI/토글을 구현했습니다. 또한 KBO 일정 JSON을 연동해 TopSchedule 접힘/펼침 기능을 제공하고 Footer는 페이지별 테마에 대응하도록 설계했습니다.",
       },
-      // API/Hooks
       {
         title: "YouTube API + React Query 연동",
-        desc: "플레이리스트/비디오 디테일 훅 작성·개선 및 캐싱/재요청 방지 설정으로 영상 섹션의 응답성 개선(협업/GPT 참고 기반).",
+        desc: "YouTube 플레이리스트 및 비디오 디테일 데이터를 가져오는 훅을 작성·개선하고 캐싱 및 재요청 방지 설정을 적용했습니다. 이를 통해 영상 섹션의 응답성과 데이터 처리 효율을 높였습니다.",
       },
     ],
     troubleshooting: [
@@ -134,29 +194,119 @@ YouTube Data API와 React Query를 사용해 영상 데이터를 캐싱·표출�
     id: "team-kuora",
     type: "팀",
     title: "KUORA",
-    date: "2025.03",
+    date: "2025.03 ~ 2025.04",
     duration: "1개월",
     size: 5,
-    position: "",
-    summary: "",
-    category: ["JavaScript"],
+    position: "Frontend (PM / Event / Header · Cart)",
+    summary:
+      "하이엔드 가구 브랜드의 이커머스 사이트 제작 프로젝트. PM을 맡아 일정과 UI 가이드를 관리하고, Header(검색/카트), CartContext 기반 장바구니, Event Page(인터랙티브 슬라이드), 상품 DB를 직접 구현.",
+    category: ["React", "JavaScript", "SCSS", "UI/UX"],
     thumbnail: "/images/thumb/kuora-thumb.jpg",
-    fullDescription: `
+    fullDescription: `KUORA는 독창적인 디자인과 기능성을 추구하는 프리미엄 가구 브랜드를 주제로 제작한 이커머스 웹사이트입니다. 하이엔드 소비자를 대상으로 세련된 UI와 직관적인 사용 흐름을 통해 고급스러운 쇼핑 경험을 제공하는 것을 목표로 했습니다.  
+저는 PM으로서 일정 관리와 역할 분배, 전체 UI 가이드라인을 총괄했으며, Header(검색·장바구니), CartContext 기반 장바구니 기능, Event Page(컬렉션 전용 인터랙티브 슬라이드), 상품 DB(JSON 구성 → GitHub Pages 배포 → fetch 연동) 구현을 담당했습니다.
+
     `,
-    features: ["메인 홈: 메인슬라이더, 추천 아티스트, 차트 미리보기, 매거진"],
-    techStack: ["JavaScript", "SCSS", "HTML"],
+    features: [
+      "HOME: 브랜드 아이덴티티를 강조한 메인 랜딩 페이지",
+      "PRODUCTS: 카테고리/디자이너/가격별 필터링 및 정렬",
+      "PRODUCT DETAIL: 이미지, 상세 정보, 장바구니 담기 기능 제공",
+      "CART: CartContext 기반 장바구니 모달, 수량 조절·삭제·총액 계산",
+      "PAYMENT: 장바구니 → 결제 페이지 흐름, 구매 정보 확인 가능",
+      "EVENT PAGE: 컬렉션 전용 인터랙티브 슬라이드 + 핫스팟(상품 상세 연동)",
+      "상품 DB: JSON으로 구성 후 GitHub Pages 배포, fetch 연동",
+      "공통 UI: Header(검색/카트/내비게이션) · Footer",
+    ],
+    techStack: [
+      "React",
+      "React Router",
+      "Context API",
+      "SCSS",
+      "GitHub Pages",
+      "Netlify",
+    ],
     techDetails: [
       {
-        name: "JavaScript",
-        summary: `
-        `,
-        usedFor: [],
+        name: "React",
+        summary:
+          "전체 UI를 컴포넌트 단위로 구조화하고 상태 기반 렌더링으로 상품·장바구니·결제 흐름을 일관되게 구현.",
+        usedFor: [
+          "Header/Footer 공통 컴포넌트",
+          "Products/Detail/Payment/Event 페이지",
+        ],
+      },
+      {
+        name: "React Router",
+        summary:
+          "경로·파라미터 기반 라우팅으로 리스트→상세→결제까지 사용자 흐름을 연결.",
+        usedFor: ["/products/:category, /detail?id=, /payment 라우트"],
+      },
+      {
+        name: "SCSS",
+        summary:
+          "공통 변수/모듈과 미디어쿼리로 스타일 일관성과 반응형 레이아웃을 구현.",
+        usedFor: [
+          "공통 스타일 가이드",
+          "Products/Grid/Detail/Payment 반응형 레이아웃",
+        ],
+      },
+      {
+        name: "Context API",
+        summary:
+          "전역 상태로 상품/장바구니 데이터를 공유하고, 로컬스토리지 연동으로 상태를 유지.",
+        usedFor: [
+          "CartContext 장바구니 상태 관리",
+          "ProductContext 상품 데이터 제공",
+        ],
+      },
+      {
+        name: "Fetch API",
+        summary: "정적 JSON 데이터 소스를 호출해 상품 목록·상세 데이터를 로딩.",
+        usedFor: ["GitHub Pages의 products.json 연동"],
+      },
+      {
+        name: "LocalStorage",
+        summary:
+          "장바구니 상태를 브라우저에 저장해 새로고침/탭 간에도 상태 유지.",
+        usedFor: ["cartItems 직렬화/복원"],
+      },
+      {
+        name: "GitHub Pages",
+        summary:
+          "상품 DB와 이미지를 정적 리소스로 배포해 프론트에서 API처럼 활용.",
+        usedFor: ["상품 DB 제공", "이미지 리소스 외부 호출"],
+      },
+      {
+        name: "Netlify",
+        summary: "프론트엔드 애플리케이션 배포/호스팅.",
+        usedFor: ["팀 프로젝트 메인 사이트 배포"],
+      },
+      {
+        name: "Kakao 주소 API",
+        summary:
+          "결제 단계에서 우편번호/주소 검색 기능을 제공해 배송지 입력 UX 개선.",
+        usedFor: ["Payment ‘주소 찾기’ 기능"],
       },
     ],
     contributions: [
       {
-        title: "",
-        desc: "",
+        title: "PM & UI 통합",
+        desc: "팀 내 일정과 역할을 분배하고 전체 UI 가이드라인을 정리·관리했습니다. 프로젝트 전반의 일관된 사용자 경험을 위해 디자인과 인터랙션 흐름을 맞추는 데 주력했습니다.",
+      },
+      {
+        title: "상품 DB",
+        desc: "상품 데이터를 JSON으로 구성해 GitHub Pages에 배포하고, 클라이언트에서는 Fetch API로 연동했습니다. 서버를 두지 않고도 안정적인 상품 정보 제공이 가능하도록 데이터 구조를 직접 설계했습니다.",
+      },
+      {
+        title: "Header",
+        desc: "React Router 기반의 네비게이션과 검색·카트 아이콘을 연결했습니다. 검색어 입력 시 상품 상세로 이동하거나 미스매치 시 안내 문구를 제공해 사용자 탐색성을 개선했습니다.",
+      },
+      {
+        title: "Cart",
+        desc: "Context API를 활용해 CartContext를 구성하고, 장바구니 모달에서 상품 담기·수량 증감·삭제·총액 계산을 구현했습니다. 장바구니에서 결제 페이지까지 자연스럽게 이어지는 흐름을 설계했습니다.",
+      },
+      {
+        title: "Event Page",
+        desc: "react-slick 기반의 커스텀 슬라이드를 제작해 브랜드 컬렉션을 강조했습니다. 상품 이미지 위에 포인트를 배치하고 React Portal을 사용해 클론 슬라이드 좌표 문제를 해결, 클릭 시 상품 카드 오버레이가 뜨며 상세 페이지로 연결되는 직관적인 UX를 구현했습니다.",
       },
     ],
     troubleshooting: [],
@@ -176,7 +326,7 @@ YouTube Data API와 React Query를 사용해 영상 데이터를 캐싱·표출�
     date: "2025.02",
     duration: "1개월",
     size: 4,
-    position: "헤더 및 차트 페이지 담당",
+    position: "Frontend (Chart / Header)",
     summary:
       "K-POP 팬덤을 위한 뮤직 플랫폼입니다. 메인/아티스트/차트/매거진/로그인·회원가입 페이지로 구성되며, 다양한 콘텐츠와 직관적인 UI로 아티스트 활동을 쉽고 재미있게 즐길 수 있도록 설계하였습니다.",
     category: ["JavaScript"],
@@ -197,51 +347,44 @@ YouTube Data API와 React Query를 사용해 영상 데이터를 캐싱·표출�
     techDetails: [
       {
         name: "JavaScript",
-        summary: `
-웹사이트의 주요 동적 기능을 JavaScript로 구현했습니다. 차트 페이지에서 곡 불러오기·재생·좋아요 토글을 처리했으며, 공통 header 영역의 스크롤 이벤트, 모바일 메뉴 토글, 검색창 열림/닫힘 기능 등을 작성했습니다.
-        `,
+        summary:
+          "웹사이트 전반의 동적 기능을 구현. 차트 페이지에서 곡 불러오기, 재생, 좋아요 토글을 처리하고, 공통 Header 영역의 스크롤 이벤트, 모바일 메뉴 토글, 검색창 열림/닫힘 기능을 제어.",
         usedFor: [
-          "차트 데이터 병렬 로딩 및 렌더링",
-          "탭 전환(Top10/주간/월간) 상태 관리",
-          "오디오 단일 재생 제어 및 종료 처리",
-          "공통 헤더의 메뉴 토글 및 스크롤 이벤트 처리",
+          "차트 데이터 비동기 로딩과 렌더링 처리",
+          "Top10/주간/월간 탭 전환 상태 관리",
+          "오디오 단일 재생 및 종료 로직 제어",
+          "Header 메뉴 토글 및 스크롤 이벤트 구현",
         ],
       },
       {
         name: "SCSS",
-        summary: `
-반응형 웹을 위해 SCSS로 공통 스타일과 레이아웃을 관리했습니다. 
-변수와 믹스를 활용하여 해상도별 반응형 처리를 체계적으로 적용하였으며, 
-공통 요소(헤더, 푸터, 버튼 등)의 스타일을 재사용 가능하게 구조화했습니다.
-        `,
+        summary:
+          "반응형 웹을 위해 SCSS로 공통 스타일과 레이아웃을 관리. 변수와 믹스를 활용해 해상도별 반응형 처리를 적용하고, 공통 요소(헤더, 푸터, 버튼 등)의 스타일을 모듈화하여 재사용성을 확보.",
         usedFor: [
-          "반응형 레이아웃 구성",
+          "다양한 해상도 대응 반응형 레이아웃 설계",
           "공통 컴포넌트 스타일 재사용",
-          "가독성 높은 SCSS 모듈 구조 관리",
+          "모듈 단위 SCSS 관리로 유지보수성 확보",
         ],
       },
       {
         name: "jQuery Slick",
         summary:
-          "메인/콘텐츠 영역의 슬라이드를 손쉽게 구성하기 위해 Slick 플러그인을 사용하였습니다.",
-        usedFor: ["배너/콘텐츠 슬라이더"],
+          "메인 및 콘텐츠 영역의 슬라이드를 구성하기 위해 Slick 플러그인을 적용. 복잡한 슬라이더 기능을 단순화하여 배너와 콘텐츠 캐러셀을 제작.",
+        usedFor: ["메인 배너 슬라이드 구성", "콘텐츠 섹션별 캐러셀 구현"],
       },
       {
         name: "LocalStorage",
         summary:
-          "실제 서버 없이 로그인/회원가입 상태를 로컬 스토리지로 관리하였습니다.",
-        usedFor: ["세션 대체 로그인 상태 유지"],
+          "실제 서버 없이 로그인/회원가입 상태를 유지하기 위해 LocalStorage를 활용. 브라우저 종료 후에도 사용자 세션을 대체.",
+        usedFor: [
+          "로그인/회원가입 상태 로컬 저장",
+          "세션 대체 사용자 인증 유지",
+        ],
       },
       {
         name: "Firebase",
-        summary: `
-Firebase Hosting으로 정적 자산을 배포했습니다. 
-개발 브랜치(dev)에서 검증 후 main 병합 시 배포하는 흐름을 사용했습니다.
-        `,
-        usedFor: [
-          "초기 배포 및 정적 호스팅",
-          "브랜치 병합 기반 배포 파이프라인",
-        ],
+        summary: "Firebase Hosting을 사용해 프로젝트를 배포.",
+        usedFor: ["정적 파일 호스팅 및 서비스 배포"],
       },
     ],
     contributions: [

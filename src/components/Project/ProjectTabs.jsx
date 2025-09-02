@@ -48,7 +48,7 @@ const TabButton = styled.button`
 `;
 
 const ProjectTabs = ({ selectedTab, onSelectTab }) => {
-  const tabs = ["All", "React", "JavaScript", "TypeScript", "HTML/CSS"];
+  const tabs = ["All", "React", "JavaScript", "TypeScript"];
 
   return (
     <TabWrapper>
