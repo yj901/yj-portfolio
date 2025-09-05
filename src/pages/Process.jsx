@@ -11,7 +11,7 @@ const Container = styled.section`
   background: var(--processbg);
   width: 100%;
   height: 950px;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   position: relative;
   z-index: 6;
   @media screen and (max-width: 1600px) {
