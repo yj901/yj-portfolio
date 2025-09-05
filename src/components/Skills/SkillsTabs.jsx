@@ -49,7 +49,7 @@ const TabButton = styled.button`
 `;
 
 const SkillsTabs = React.memo(({ selectedTab, onSelectTab }) => {
-  const tabs = ["Frontend", "Library / Framework", "Tools", "Design"];
+  const tabs = ["Frontend", "Language", "Tools", "Design"];
 
   return (
     <TabWrapper>

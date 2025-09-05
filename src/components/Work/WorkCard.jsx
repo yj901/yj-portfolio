@@ -4,6 +4,9 @@ const Card = styled.div`
   /* border: 1px solid #f00; */
   background: var(--gray2b);
   cursor: pointer;
+  a {
+    display: inline-block;
+  }
 `;
 
 const Thumbnail = styled.img`
@@ -87,14 +90,16 @@ const Summary = styled.p`
   }
 `;
 
-const WorkCard = ({ title, summary, thumbnail }) => {
+const WorkCard = ({ title, summary, thumbnail, link }) => {
   return (
     <Card>
-      <Thumbnail src={thumbnail} alt={title} />
-      <TextWrap>
-        <Title>{title}</Title>
-        <Summary>{summary}</Summary>
-      </TextWrap>
+      <a href={link} target="_blank">
+        <Thumbnail src={thumbnail} alt={title} />
+        <TextWrap>
+          <Title>{title}</Title>
+          <Summary>{summary}</Summary>
+        </TextWrap>
+      </a>
     </Card>
   );
 };

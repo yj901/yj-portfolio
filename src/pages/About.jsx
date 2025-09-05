@@ -4,7 +4,6 @@ import iconMail from "../assets/icons/Mail.svg";
 import iconCalendar from "../assets/icons/Calendar.svg";
 import iconPhone from "../assets/icons/Phone.svg";
 import Github from "../components/Github";
-
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -421,7 +420,10 @@ const About = () => {
               <Github fill={"#fff"} />
               GITHUB
             </a>
-            <a href="https://github.com/yj901" target="_blank">
+            <a
+              href="https://vivid-decimal-3d0.notion.site/2647fa1eab3680d9a5b9c051364f7890"
+              target="_blank"
+            >
               RESUME
             </a>
           </BtnWrap>

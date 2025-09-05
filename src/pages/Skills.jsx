@@ -154,36 +154,35 @@ const TitWrap = styled.div`
 
 const Icon = styled.div`
   padding: 7px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--gray19);
   border-radius: 50%;
   img {
-    width: 25px;
-    aspect-ratio: 1;
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 3px;
   }
   @media screen and (max-width: 1600px) {
-    img {
-      width: 24px;
-    }
+    width: 37px;
+    height: 37px;
   }
   @media screen and (max-width: 1024px) {
+    width: 30px;
+    height: 30px;
     padding: 5px;
-    img {
-      width: 20px;
-    }
   }
   @media screen and (max-width: 768px) {
-    img {
-      width: 18px;
-    }
+    width: 28px;
+    height: 28px;
   }
   @media screen and (max-width: 500px) {
     padding: 4px;
-    img {
-      width: 16px;
-    }
+    width: 24px;
+    height: 24px;
   }
 `;
 
