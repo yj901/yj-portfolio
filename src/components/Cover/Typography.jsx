@@ -2,7 +2,9 @@ import styled from "styled-components";
 import CircleTwo from "./CircleTwo";
 
 const Container = styled.div`
-  width: 1400px;
+  /* width: 1400px; */
+  width: 76%;
+  /* border: 1px solid #f00; */
   position: absolute;
   left: 50%;
   top: 54%;
@@ -28,7 +30,8 @@ const TextWrap = styled.div`
 
 const Text = styled.h2`
   font-family: var(--nunito);
-  font-size: 23.5rem;
+  /* font-size: 23.5rem; */
+  font-size: 13vw;
   font-weight: 500;
   line-height: 0.91;
   position: relative;
@@ -70,7 +73,8 @@ const Txt2 = styled.p`
   position: absolute;
   top: 20%;
   left: 7%;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: 1.05vw;
   font-family: "Pretendard", sans-serif;
   font-weight: 200;
   line-height: 1.1;

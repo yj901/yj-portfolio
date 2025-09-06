@@ -22,7 +22,7 @@ const Container = styled.div`
 `;
 
 const CirBase = styled.div`
-  width: 150px;
+  width: 8vw;
   aspect-ratio: 1;
   border-radius: 50%;
   display: flex;

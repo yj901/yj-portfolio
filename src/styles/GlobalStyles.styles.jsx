@@ -62,6 +62,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Pretendard", sans-serif;
     font-size: 1.6rem;
     color: var(--gray1);
+    overflow-x: hidden;
   input, textarea {
     font-family: "Pretendard", sans-serif;
   }
@@ -73,10 +74,12 @@ const GlobalStyles = createGlobalStyle`
 
 
   .inner {
-    width: 1400px;
-    margin: 0 auto;
-    @media screen and (max-width: 1600px) {
+    /* width: 1500px; */
+    /* margin: 0 auto; */
+    margin: 0 10%;
+    @media screen and (max-width: 1680px) {
       width: 100%;
+       margin: 0 auto;
       padding-left: 5.3%;
       padding-right: 5.3%;
     }

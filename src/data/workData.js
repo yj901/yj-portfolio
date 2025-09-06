@@ -45,6 +45,15 @@ const workData = [
     link: "https://kunsancollege.ac.kr/",
   },
   {
+    id: "work-taeyoung",
+    type: "회사",
+    title: "(주)태영ENC",
+    summary:
+      "메인 페이지 부분 퍼블리싱 + 상세 페이지(회사소개, 품질관리) 부분 퍼블리싱",
+    thumbnail: "/images/thumb/taeyoung-thumb.jpg",
+    link: "http://taeyoungenc.co.kr/",
+  },
+  {
     id: "work-akos",
     type: "회사",
     title: "(주)아코스",

@@ -7,9 +7,10 @@ const Card = styled.div`
 
 const Thumbnail = styled.img`
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
+  aspect-ratio: 1/0.58;
   object-fit: cover;
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1024px) {
     height: calc(120px + 11vw);
   }
 `;

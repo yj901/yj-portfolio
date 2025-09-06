@@ -14,9 +14,10 @@ const SliderSection = styled.section`
   /* border: 1px solid #f00; */
   position: relative;
   margin-top: 30px;
-  margin-left: calc((100% - 1400px) / 2);
+  /* margin-left: calc((100% - 1400px) / 2); */
+  margin-left: 10%;
   margin-right: 150px;
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1680px) {
     margin-left: 5.2%;
   }
   @media screen and (max-width: 1400px) {
@@ -139,6 +140,9 @@ const ProjectSlide = () => {
               slidesPerView: 2.6,
             },
             1600: {
+              slidesPerView: 2.8,
+            },
+            1700: {
               slidesPerView: 2.8,
             },
           }}

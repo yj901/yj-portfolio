@@ -12,9 +12,11 @@ const SliderSection = styled.section`
   /* border: 1px solid #f00; */
   position: relative;
   margin-top: 95px;
-  margin-left: calc((100% - 1400px) / 2);
+  /* margin-left: calc((100% - 1400px) / 2); */
+  margin-left: 10%;
   margin-right: 150px;
-  @media screen and (max-width: 1600px) {
+
+  @media screen and (max-width: 1680px) {
     margin-top: 85px;
     margin-left: 5.2%;
   }

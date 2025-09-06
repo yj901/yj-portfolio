@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Pagination } from "swiper/modules";
-
 import teamData from "../../data/teamData";
 import { SlideBtnStyle } from "../SlideArrows";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -11,8 +10,8 @@ import ProjectModal from "../ProjectModal";
 
 const SliderSection = styled.section`
   position: relative;
-  width: 1400px;
-  margin: 0 auto;
+  /* width: 1400px; */
+  /* margin: 0 auto; */
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
@@ -25,9 +24,6 @@ const SliderSection = styled.section`
   }
   @media screen and (max-width: 1650px) {
     margin-top: 60px;
-  }
-  @media screen and (max-width: 1650px) {
-    margin-top: 40px;
     padding-right: 90px;
   }
   @media screen and (max-width: 1024px) {
@@ -63,7 +59,7 @@ const SliderSection = styled.section`
         transform: translate(-50%, -50%);
       }
     }
-    @media screen and (max-width: 1650px) {
+    @media screen and (max-width: 1680px) {
       top: auto;
       bottom: 0;
       &:first-of-type {
@@ -161,7 +157,8 @@ const SildeWrap = styled.div`
     padding-bottom: 32px;
     img {
       width: 100%;
-      height: 450px;
+      /* height: 450px; */
+      aspect-ratio: 1/0.65;
       object-fit: cover;
       /* border-radius: 4px; */
       cursor: pointer;

@@ -11,8 +11,12 @@ const Card = styled.div`
 
 const Thumbnail = styled.img`
   width: 100%;
-  height: 250px;
+  /* height: 250px; */
+  aspect-ratio: 1/0.65;
   object-fit: cover;
+  @media screen and (max-width: 1920px) {
+    aspect-ratio: 1/0.58;
+  }
   @media screen and (max-width: 1600px) {
     height: calc(120px + 11vw);
   }
@@ -20,7 +24,10 @@ const Thumbnail = styled.img`
 
 const TextWrap = styled.div`
   padding: 28px 32px 32px;
-  height: 220px;
+  height: 250px;
+  @media screen and (max-width: 1920px) {
+    height: 220px;
+  }
   @media screen and (max-width: 1600px) {
     padding: 26px 30px 30px;
     height: 190px;
