@@ -8,6 +8,13 @@ const skillsData = [
   },
   {
     category: "Frontend",
+    skill: "Next.js",
+    desc: "App Router 기반의 파일 라우팅과 레이아웃 구조를 활용해 페이지를 구성하고, 서버와 클라이언트 컴포넌트를 구분하여 사용할 수 있습니다.",
+    icon: "nextjs",
+    tags: ["App Router", "Routing", "Client/Server Components"],
+  },
+  {
+    category: "Frontend",
     skill: "Redux",
     desc: "전역 상태 관리를 위해 사용했으며, 미들웨어를 통해 액션 흐름을 제어한 경험이 있습니다.",
     icon: "redux",
@@ -115,6 +122,13 @@ const skillsData = [
     desc: "Firebase Hosting을 활용해 프로젝트를 배포한 경험이 있습니다.",
     icon: "firebase",
     tags: ["Hosting", "Deployment"],
+  },
+  {
+    category: "Tools",
+    skill: "Vercel",
+    desc: "Next.js 프로젝트를 Vercel로 배포하고, 환경 변수를 설정해본 경험이 있습니다.",
+    icon: "vercel",
+    tags: ["Deployment", "Environment"],
   },
 
   //design

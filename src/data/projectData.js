@@ -1,6 +1,91 @@
 //  개인 프로젝트
 const projectData = [
   {
+    id: "project-cinema",
+    type: "개인",
+    title: "시네마스코프",
+    date: "2025.09",
+    duration: "1주",
+    summary:
+      "TMDB API를 연동해 영화와 TV 프로그램 정보를 검색하고 탐색할 수 있는 웹 애플리케이션입니다. Next.js와 TypeScript 기반으로 개발했습니다.",
+    category: ["React", "TypeScript"],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    thumbnail: "/images/thumb/cinema-thumb.jpg",
+    fullDescription: `영화와 TV 프로그램 정보를 탐색할 수 있는 웹 애플리케이션입니다.  
+TMDB API에서 데이터를 가져와 최신 영화, 인기 영화, TV 시리즈 등을 보여주며 검색 기능을 통해 원하는 콘텐츠를 쉽게 찾을 수 있습니다.  
+Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버 컴포넌트 구분, React Query 상태 관리, 아토믹 디자인 구조를 적용했습니다.`,
+    features: [
+      "메인 페이지에서 최신/인기 영화와 TV 프로그램 섹션 출력",
+      "검색 기능으로 영화/TV 콘텐츠 탐색",
+      "상세 페이지에서 작품 정보 확인",
+      "페이지네이션을 통한 데이터 탐색",
+      "반응형 UI",
+    ],
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+    ],
+    techDetails: [
+      {
+        name: "Next.js",
+        summary:
+          "App Router 기반 라우팅을 적용하고, 서버와 클라이언트 컴포넌트를 구분하여 화면을 구성했습니다.",
+        usedFor: ["라우팅 구조", "페이지/레이아웃 구성"],
+      },
+      {
+        name: "TypeScript",
+        summary:
+          "API 응답 타입과 컴포넌트 props 타입을 정의하여 런타임 오류를 줄이고, 안정적인 코드 작성이 가능하도록 했습니다.",
+        usedFor: ["API 타입 정의", "컴포넌트 props 타입 관리"],
+      },
+      {
+        name: "React",
+        summary:
+          "컴포넌트 구조를 활용해 섹션별 UI를 분리하고, 상태 변화에 따라 필요한 부분만 렌더링하도록 구성했습니다.",
+        usedFor: [
+          "레이아웃과 UI 컴포넌트 분리",
+          "상태 기반 조건부 렌더링",
+          "재사용 가능한 UI 구성",
+        ],
+      },
+      {
+        name: "React Query",
+        summary:
+          "TMDB API와 연결해 서버 데이터를 가져오고, 캐싱을 통해 동일한 요청을 최소화했습니다.",
+        usedFor: ["데이터 패칭", "캐싱", "로딩/에러 상태 관리"],
+      },
+      {
+        name: "Tailwind CSS",
+        summary:
+          "유틸리티 클래스를 활용해 빠르게 UI 스타일링을 구성했으며, 반응형 디자인을 적용했습니다.",
+        usedFor: ["UI 스타일링", "반응형 대응"],
+      },
+      {
+        name: "Atomic Design",
+        summary:
+          "Atoms, Molecules, Organisms 단위로 컴포넌트를 구조화하여 재사용성과 유지보수성을 높였습니다.",
+        usedFor: ["컴포넌트 설계", "폴더 구조 관리"],
+      },
+    ],
+    imageList: [
+      "/images/details/cinema-detail1.jpg",
+      "/images/details/cinema-detail2.jpg",
+      "/images/details/cinema-detail3.jpg",
+    ],
+    // troubleshooting: [
+    //   {
+    //     title: "",
+    //     desc: "",
+    //   },
+    // ],
+    github: "https://github.com/yj901/cinema-scope",
+    link: "https://cinema-scope-beryl.vercel.app/",
+    videoUrl: null,
+  },
+  {
     id: "project-todo",
     type: "개인",
     title: "투두리스트",

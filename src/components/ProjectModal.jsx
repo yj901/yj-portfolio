@@ -530,7 +530,7 @@ const ProjectModal = ({ data, onClose }) => {
                 <span>
                   {data.type === "팀" && data.size && `${data.size}인 `}
                   {data.type} 프로젝트
-                </span>
+                </span>{" "}
                 <span className="dot">·</span>
                 <span> 제작시기 {data.date}</span>{" "}
                 <span className="dot">·</span>{" "}

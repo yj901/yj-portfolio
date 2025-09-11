@@ -17,25 +17,29 @@ import photoshop from "./Photoshop-logo.png";
 import illustrator from "./Illustrator.png";
 import netlify from "./Netlify_Symbol_0.svg";
 import firebase from "./Firebase-icon.png";
+import nextjs from "./next-js.png";
+import vercel from "./vercel-icon.png";
 
 export const ICONS = {
   react,
-  javascript,
+  nextjs,
+  redux,
+  zustand,
+  reactquery,
   scss,
   styled,
-  css,
-  html,
-  typescript,
-  zustand,
-  redux,
-  reactquery,
   tailwind,
   gsap,
   framermotion,
+  javascript,
+  typescript,
+  css,
+  html,
   githubIcon,
+  netlify,
+  firebase,
+  vercel,
   figma,
   photoshop,
   illustrator,
-  netlify,
-  firebase,
 };
