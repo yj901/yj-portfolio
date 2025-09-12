@@ -224,6 +224,7 @@ const ContactForm = () => {
           <label htmlFor="user_name">NAME</label>
           <input
             type="text"
+            id="user_name"
             name="user_name"
             placeholder="성함을 입력해주세요"
             {...register("user_name", {
@@ -236,6 +237,7 @@ const ContactForm = () => {
           <label htmlFor="user_email">EMAIL</label>
           <input
             type="email"
+            id="user_email"
             name="user_email"
             placeholder="이메일을 입력해주세요"
             {...register("user_email", {
@@ -249,6 +251,7 @@ const ContactForm = () => {
         <InputStyle>
           <label htmlFor="message">MESSAGE</label>
           <textarea
+            id="message"
             name="message"
             placeholder="내용을 입력해주세요"
             {...register("message", {

@@ -1,12 +1,27 @@
-# React + Vite
+# SHAPED DYNAMIC SYSTEMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+구여진의 포트폴리오 사이트입니다.  
+프론트엔드 개발자로서의 주요 프로젝트, 팀 프로젝트, 기술 스택을 정리하고
+GSAP를 활용해 인터랙티브하게 구현한 원페이지 사이트입니다.
 
-Currently, two official plugins are available:
+## 🔗 배포 링크
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [포트폴리오 바로가기](https://gyj-portfolio.netlify.app/)
 
-## Expanding the ESLint configuration
+## 📌 주요 섹션
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Cover** : 인트로 커버
+- **About** : 자기소개
+- **Project** : 개인 프로젝트 소개
+- **Team** : 팀 프로젝트 슬라이드
+- **Skills** : 기술 스택, 프로젝트 적용 기술 정리
+- **Process** : 작업 과정 단계별 정리
+- **Contact** : 연락처 및 컨택트 메일폼
+
+## 🛠 기술 스택
+
+- **Frontend** : React, JavaScript, styled-components
+- **Animation** : GSAP (ScrollTrigger, PinScroll), Swiper
+- **State Management** : Zustand
+- **Deploy** : Netlify
+- **Design** : Figma

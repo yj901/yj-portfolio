@@ -198,11 +198,15 @@ const Hr = styled.hr`
 `;
 
 const Introduce = styled.div`
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
+  font-size: 0.8vw;
   font-weight: 400;
   line-height: 1.8;
   b {
     font-weight: 700;
+  }
+  @media screen and (max-width: 2300px) {
+    font-size: 1.8rem;
   }
   @media screen and (max-width: 1600px) {
     font-size: 1.6rem;
