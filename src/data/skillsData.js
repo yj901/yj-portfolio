@@ -51,7 +51,7 @@ const skillsData = [
   {
     category: "Frontend",
     skill: "Tailwind CSS",
-    desc: "유틸리티 클래스 기반으로 빠르게 반응형 UI를 제작했습니다.",
+    desc: "Tailwind의 유틸리티 클래스를 활용해 반응형 UI를 구현한 경험이 있습니다.",
     icon: "tailwind",
     tags: ["Utility-first", "Responsive"],
   },

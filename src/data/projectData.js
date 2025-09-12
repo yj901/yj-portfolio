@@ -60,7 +60,7 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
       {
         name: "Atomic Design",
         summary:
-          "Atoms, Molecules, Organisms 단위로 컴포넌트를 구조화하여 재사용성과 유지보수성을 높였습니다.",
+          "Atoms, Molecules, Organisms, Templates 단위로 컴포넌트를 구조화하여 재사용성과 유지보수성을 높였습니다.",
         usedFor: ["컴포넌트 설계", "폴더 구조 관리"],
       },
     ],
