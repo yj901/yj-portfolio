@@ -7,9 +7,9 @@ const projectData = [
     date: "2025.09",
     duration: "1주",
     summary:
-      "TMDB API를 연동해 영화와 TV 프로그램 정보를 검색하고 탐색할 수 있는 웹 애플리케이션입니다. Next.js와 TypeScript 기반으로 개발했습니다.",
+      "TMDB API를 연동해 영화와 TV 프로그램 정보를 검색하고 탐색할 수 있는 웹 애플리케이션입니다.",
     category: ["React", "TypeScript"],
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    tags: ["Next.js", "TypeScript", "Tailwind"],
     thumbnail: "/images/thumb/cinema-thumb.jpg",
     fullDescription: `영화와 TV 프로그램 정보를 탐색할 수 있는 웹 애플리케이션입니다.  
 TMDB API에서 데이터를 가져와 최신 영화, 인기 영화, TV 시리즈 등을 보여주며 검색 기능을 통해 원하는 콘텐츠를 쉽게 찾을 수 있습니다.  
@@ -21,13 +21,7 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
       "페이지네이션을 통한 데이터 탐색",
       "반응형 UI",
     ],
-    techStack: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "React Query",
-    ],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind", "React Query"],
     techDetails: [
       {
         name: "Next.js",
@@ -38,13 +32,13 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
       {
         name: "TypeScript",
         summary:
-          "API 응답 타입과 컴포넌트 props 타입을 정의하여 런타임 오류를 줄이고, 안정적인 코드 작성이 가능하도록 했습니다.",
+          "API 응답 타입과 컴포넌트 props 타입을 정의하여 런타임 오류를 줄이고 안정적인 코드 작성이 가능하도록 했습니다.",
         usedFor: ["API 타입 정의", "컴포넌트 props 타입 관리"],
       },
       {
         name: "React",
         summary:
-          "컴포넌트 구조를 활용해 섹션별 UI를 분리하고, 상태 변화에 따라 필요한 부분만 렌더링하도록 구성했습니다.",
+          "컴포넌트 구조를 활용해 섹션별 UI를 분리하고 상태 변화에 따라 필요한 부분만 렌더링하도록 구성했습니다.",
         usedFor: [
           "레이아웃과 UI 컴포넌트 분리",
           "상태 기반 조건부 렌더링",
@@ -54,13 +48,13 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
       {
         name: "React Query",
         summary:
-          "TMDB API와 연결해 서버 데이터를 가져오고, 캐싱을 통해 동일한 요청을 최소화했습니다.",
+          "TMDB API와 연결해 서버 데이터를 가져오고 캐싱을 통해 동일한 요청을 최소화했습니다.",
         usedFor: ["데이터 패칭", "캐싱", "로딩/에러 상태 관리"],
       },
       {
         name: "Tailwind CSS",
         summary:
-          "유틸리티 클래스를 활용해 빠르게 UI 스타일링을 구성했으며, 반응형 디자인을 적용했습니다.",
+          "유틸리티 클래스를 활용해 빠르게 UI 스타일링을 구성했으며 반응형 디자인을 적용했습니다.",
         usedFor: ["UI 스타일링", "반응형 대응"],
       },
       {
@@ -81,6 +75,12 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
     //     desc: "",
     //   },
     // ],
+    improvements: [
+      {
+        title: "Next.js 활용 확장",
+        desc: "Next.js로 처음 진행한 프로젝트라 완성 후 돌아보니 Next.js의 고유 기능(SSR/SSG 등)을 충분히 활용하지 못하고 CSR 중심으로 제작하게 된 점이 아쉬웠습니다. 향후에는 현재 UI를 유지하면서 SSR 구조로 확장해 초기 로딩 속도와 SEO를 강화해보고 싶습니다.",
+      },
+    ],
     github: "https://github.com/yj901/cinema-scope",
     link: "https://cinema-scope-beryl.vercel.app/",
     videoUrl: null,
