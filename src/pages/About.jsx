@@ -9,6 +9,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import RotateAni from "../components/About/RotateAni";
+import profileImg from "../assets/imgs/yj400.jpg";
 
 const Container = styled.section`
   position: relative;
@@ -97,9 +98,10 @@ const ProfileWrap = styled.div`
 
 const ImgWrap = styled.div``;
 
-const Img = styled.div`
+const Img = styled.img`
   width: 225px;
   height: 225px;
+  object-fit: cover;
   border-radius: 50%;
   background: #ddd;
   overflow: hidden;
@@ -381,7 +383,7 @@ const About = () => {
       <Title title={"WHO AM I"} />
       <ProfileWrap className="inner">
         <ImgWrap>
-          <Img />
+          <Img src={profileImg} alt={"profileYJ"} />
         </ImgWrap>
         <TxtWrap>
           <Name>
