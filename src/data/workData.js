@@ -31,7 +31,7 @@ const workData = [
     id: "work-nursing",
     type: "회사",
     title: "Kunsan College of Nursing",
-    summary: "원페이지 섹션별 퍼블리싱",
+    summary: "원페이지 섹션별 퍼블리싱 부분 참여",
     thumbnail: "/images/thumb/nursing-thumb.jpg",
     link: "https://kunsancollege.ac.kr/",
   },
