@@ -10,6 +10,7 @@ const Container = styled.section`
   min-height: 920px;
   background: url(${coverbg}) center / cover no-repeat;
   color: var(--light);
+  overflow: hidden;
 
   @media screen and (max-width: 1600px) {
     min-height: auto;
