@@ -51,6 +51,16 @@ const Container = styled.div`
   @media screen and (max-width: 768px) {
     padding: 0 3%;
     top: 50%;
+
+    .text1 {
+      transform: translateX(-150%);
+    }
+    .text2 {
+      transform: translateX(150%);
+    }
+    .text3 {
+      transform: translateX(-150%);
+    }
   }
 `;
 
