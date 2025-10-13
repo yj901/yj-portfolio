@@ -122,19 +122,20 @@ const SkillDesc = styled.div`
   width: 65%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  align-items: flex-start;
+  gap: 16px;
   padding-right: 30px;
   @media screen and (max-width: 1600px) {
     width: 65%;
-    gap: 12px;
+    gap: 15px;
   }
   @media screen and (max-width: 1024px) {
     width: 70%;
-    gap: 10px;
+    gap: 12px;
   }
   @media screen and (max-width: 768px) {
     width: 72%;
-    gap: 8px;
+    gap: 11px;
     padding-right: 20px;
   }
   @media screen and (max-width: 500px) {
@@ -144,15 +145,14 @@ const SkillDesc = styled.div`
 `;
 
 const TitWrap = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  @media screen and (max-width: 1024px) {
-    gap: 6px;
-  }
+  position: relative;
 `;
 
 const Icon = styled.div`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(calc(100% + 10px), -50%);
   padding: 7px;
   width: 38px;
   height: 38px;
@@ -174,6 +174,7 @@ const Icon = styled.div`
     width: 30px;
     height: 30px;
     padding: 5px;
+    transform: translate(calc(100% + 6px), -50%);
   }
   @media screen and (max-width: 768px) {
     width: 28px;
