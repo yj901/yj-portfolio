@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import ArrBg from "./ArrBg";
 import {
   Lightbulb,
@@ -7,6 +7,16 @@ import {
   CodeXml,
   Rocket,
 } from "lucide-react";
+import { useRef, useEffect } from "react";
+
+const lineAni = keyframes`
+  0% {
+      stroke-dashoffset: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+`;
 
 const Container = styled.div`
   position: relative;
@@ -24,8 +34,17 @@ const Container = styled.div`
       height: auto;
       display: block;
       aspect-ratio: 1684 / 456;
+      /* .path {
+       
+      } */
     }
   }
+  &.ani {
+    .path {
+      /* animation: ${lineAni} 2s linear infinite; */
+    }
+  }
+
   @media screen and (max-width: 1600px) {
     .arrbgWrap {
       margin-top: 20px;
@@ -265,8 +284,14 @@ const Step5 = styled(StepNum)`
 `;
 
 const StepsArr = () => {
+  const line = useRef(null);
+  useEffect(() => {
+    if (line.current) {
+      line.current.classList.add("ani");
+    }
+  }, []);
   return (
-    <Container>
+    <Container ref={line}>
       <div className="arrbgWrap">
         <ArrBg />
       </div>

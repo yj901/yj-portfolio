@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CircleTwo from "./CircleTwo";
+import { useEffect, useRef } from "react";
 
 const Container = styled.div`
   /* width: 1400px; */
@@ -9,6 +10,36 @@ const Container = styled.div`
   left: 50%;
   top: 54%;
   transform: translate(-50%, -50%);
+
+  .text1 {
+    position: relative;
+    display: inline-block;
+    transform: translateX(150%);
+    transition: transform 0.8s ease-in-out;
+    &.ani {
+      transform: translateX(0);
+    }
+  }
+  .text2 {
+    position: relative;
+    display: inline-block;
+    transform: translateX(-150%);
+    transition: transform 0.8s ease-in-out;
+    transition-delay: 0.2s;
+    &.ani {
+      transform: translateX(0);
+    }
+  }
+  .text3 {
+    position: relative;
+    display: inline-block;
+    transform: translateX(150%);
+    transition: transform 0.8s ease-in-out;
+    transition-delay: 0.4s;
+    &.ani {
+      transform: translateX(0);
+    }
+  }
 
   @media screen and (max-width: 1600px) {
     width: 100%;
@@ -115,16 +146,40 @@ const Txt2 = styled.p`
 `;
 
 const Typography = () => {
+  const text1 = useRef(null);
+  const text2 = useRef(null);
+  const text3 = useRef(null);
+
+  useEffect(() => {
+    if (text1.current) {
+      text1.current.classList.add("ani");
+    }
+    if (text2.current) {
+      text2.current.classList.add("ani");
+    }
+    if (text3.current) {
+      text3.current.classList.add("ani");
+    }
+  }, []);
+
   return (
     <Container>
       <TextWrap>
         <Text>
           <CircleTwo />
-          SHAPED
+          <span className="text1" ref={text1}>
+            SHAPED
+          </span>
         </Text>
-        <Text>DYNAMIC</Text>
         <Text>
-          SYSTEMS
+          <span className="text2" ref={text2}>
+            DYNAMIC
+          </span>
+        </Text>
+        <Text>
+          <span className="text3" ref={text3}>
+            SYSTEMS
+          </span>
           <Txt2>
             Ideas into UI<span>,</span>
             <br /> UI into experience<span>,</span>
