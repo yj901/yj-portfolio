@@ -389,12 +389,13 @@ const About = () => {
           <Name>
             GU YEOJIN <span>구여진</span>
           </Name>
-          <Support>Frontend Developer</Support>
+          <Support>Frontend / Publisher</Support>
           <Hr />
           <Introduce>
             <p>
               사용자 흐름과 인터페이스를 고민하며
-              <br /> 아이디어를 구현하는 프론트엔드 개발자 <b>구여진</b>입니다.
+              <br /> 작은 디테일도 세심하게 완성해 나가는 사람, <b>구여진</b>
+              입니다.
             </p>
             <p>
               웹퍼블리셔로 1년간 구조적인 퍼블리싱과 시각 완성도를 경험했고
@@ -402,8 +403,9 @@ const About = () => {
               <b>인터랙션 개발</b>에 집중하고 있습니다.
             </p>
             <p>
-              작지만 명확한 기능이 쌓여 완성되는 그 순간에 개발의 즐거움을
-              느낍니다.
+              시각적 완성도와 사용성을 함께 고려하며
+              <br />
+              사용자가 자연스럽게 머물 수 있는 웹을 구현하고자 합니다.
             </p>
           </Introduce>
           <IntroList>
