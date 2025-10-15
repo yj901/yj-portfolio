@@ -13,7 +13,7 @@ const Container = styled.section`
   height: 100vh;
   min-height: 900px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   /* border: 1px solid #f00; */
   overflow: hidden;
   @media screen and (max-width: 1600px) {

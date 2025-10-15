@@ -9,23 +9,13 @@ const teamData = [
     size: 6,
     position: "Frontend (HOME / TEAM HOME / Header · Footer)",
     summary:
-      "KBO 하이라이트 기반 OTT+커머스 웹 서비스. 메인 홈, 팀 홈, 공통 UI를 담당하여 콘텐츠 → 커머스로 이어지는 흐름을 설계.",
+      "ROOKie는 KBO 야구 팬을 위한 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 웹 서비스입니다. 팬들이 원하는 순간의 영상을 빠르게 즐기고 관련 굿즈로 자연스럽게 이어지는 경험을 제공하는 것을 목표로 했습니다.",
     category: ["React", "JavaScript", "UI/UX"],
     thumbnail: "/images/thumb/rookie-thumb.jpg",
-    fullDescription: `ROOKie는 KBO 야구 팬을 위한 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 웹 서비스입니다. 팬들이 원하는 순간의 영상을 빠르게 즐기고, 관련 굿즈로 자연스럽게 이어지는 경험을 제공하는 것을 목표로 했습니다.  
+    fullDescription: `ROOKie는 KBO 야구 팬을 위한 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 웹 서비스입니다. 팬들이 원하는 순간의 영상을 빠르게 즐기고 관련 굿즈로 자연스럽게 이어지는 경험을 제공하는 것을 목표로 했습니다.  
 저는 메인 HOME 페이지와 TEAM HOME(업커밍 매치, 구단별 영상, 인플루언서 존), 공통 UI(Header, Footer, TopSchedule)를 구현했습니다. 또한 YouTube Data API와 React Query를 활용해 영상 데이터를 캐싱·표출하고, 팀별/플레이리스트 기반으로 슬라이드 UI를 구성했습니다.
 `,
     features: [
-      // // HOME
-      // "HOME: 로그인 여부에 따라 MyhomeMainSlide / MainSlide 분기",
-      // "HOME: ShortsSlide, PlaySlidewithTabs, RankingTable, PopularPlayer, CollaboBanner 배치",
-      // // TEAM HOME
-      // "TEAM HOME: UpcomingMatch(경기 일정), 구단별 영상 섹션(영상 모아보기/팀 클립), InfluencerZone 구현",
-      // "TEAM HOME: InfluencerZone에서 인플루언서별 영상/프로필/연동 상품 UI 구성",
-      // // COMMON UI
-      // "Header: 메인 내비게이션, 팀 모드 토글, 모바일 메뉴/스토어 드롭다운, 검색창 UI/토글",
-      // "TopSchedule: KBO 일정 JSON 기반 3일 스케줄 박스 + 접힘/펼침",
-      // "Footer: 페이지별 테마 대응 및 반응형",
       "HOME: 로그인/비로그인 분기, 리그 순위·인기 굿즈 큐레이션",
       "TEAM HOME: 구단별 경기/클립/굿즈/인플루언서 콘텐츠 제공",
       "PLAY: 주간 하이라이트·팀별/인플루언서 영상 큐레이션",
@@ -199,7 +189,7 @@ const teamData = [
     size: 5,
     position: "Frontend (PM / Event / Header · Cart)",
     summary:
-      "하이엔드 가구 브랜드의 이커머스 사이트 제작 프로젝트. PM을 맡아 일정과 UI 가이드를 관리하고, Header(검색/카트), CartContext 기반 장바구니, Event Page(인터랙티브 슬라이드), 상품 DB를 직접 구현.",
+      "KUORA는 독창적인 디자인과 기능성을 추구하는 프리미엄 가구 브랜드를 주제로 제작한 이커머스 웹사이트입니다. 하이엔드 소비자를 대상으로 세련된 UI와 직관적인 사용 흐름을 통해 고급스러운 쇼핑 경험을 제공하는 것을 목표로 했습니다.",
     category: ["React", "JavaScript", "SCSS", "UI/UX"],
     thumbnail: "/images/thumb/kuora-thumb.jpg",
     fullDescription: `KUORA는 독창적인 디자인과 기능성을 추구하는 프리미엄 가구 브랜드를 주제로 제작한 이커머스 웹사이트입니다. 하이엔드 소비자를 대상으로 세련된 UI와 직관적인 사용 흐름을 통해 고급스러운 쇼핑 경험을 제공하는 것을 목표로 했습니다.  
@@ -338,7 +328,7 @@ const teamData = [
     size: 4,
     position: "Frontend (Chart / Header)",
     summary:
-      "K-POP 팬덤을 위한 뮤직 플랫폼입니다. 메인/아티스트/차트/매거진/로그인·회원가입 페이지로 구성되며, 다양한 콘텐츠와 직관적인 UI로 아티스트 활동을 쉽고 재미있게 즐길 수 있도록 설계하였습니다.",
+      "메타포는 K-pop 팬덤 문화를 하나의 공간에서 즐길 수 있도록 제작한 팀 프로젝트 웹사이트입니다. 아티스트/차트/매거진의 공간에서 다양한 콘텐츠와 직관적인 UI로 아티스트 활동을 쉽고 재미있게 즐길 수 있도록 설계하였습니다.",
     category: ["JavaScript"],
     thumbnail: "/images/thumb/metaphor-thumb.jpg",
     fullDescription: `메타포는 K-pop 팬덤 문화를 하나의 공간에서 즐길 수 있도록 제작한 팀 프로젝트 웹사이트입니다. 플랫폼 타겟은 놀이하듯 팬덤 문화를 즐기는 MZ세대로, 아티스트 정보, 영상, 음악 차트, 매거진, 댓글과 좋아요 기능 등 팬덤 활동을 집약한 플랫폼을 지향했습니다. 

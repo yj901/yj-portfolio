@@ -93,8 +93,8 @@ function Root() {
       <SideNav />
       <Cover />
       <About />
-      <Project />
       <Team />
+      <Project />
       <Work />
       <Skills />
       <Process />

@@ -5,7 +5,7 @@ const workData = [
     type: "회사",
     title: "W MEDICAL",
     summary:
-      "메인 페이지 부분 퍼블리싱 + 상세 페이지(소개, 제품, 서비스) 부분 퍼블리싱",
+      "메인 페이지 배너, 카드 등 부분 퍼블리싱 + 상세 페이지(소개, 제품, 서비스) 부분 퍼블리싱",
     thumbnail: "/images/thumb/wmedical-thumb.jpg",
     link: "http://wmedical.shazam.co.kr/",
   },
@@ -14,7 +14,7 @@ const workData = [
     type: "회사",
     title: "ISO 인증 길잡이",
     summary:
-      "메인 페이지 부분 퍼블리싱 + 상세 페이지(회사소개, 인증개요 · 유형) 부분 퍼블리싱",
+      "메인 페이지 배너, 슬라이드 등 부분 퍼블리싱 + 상세 페이지(회사소개, 인증개요 · 유형) 부분 퍼블리싱",
     thumbnail: "/images/thumb/iso-thumb.jpg",
     link: "http://www.iso-cg.com/",
   },
@@ -23,7 +23,7 @@ const workData = [
     type: "회사",
     title: "(주)TDB",
     summary:
-      "메인 페이지 부분 퍼블리싱 + 상세 페이지(회사소개, 사업개요) 부분 퍼블리싱",
+      "메인 페이지 배너 부분 퍼블리싱 + 상세 페이지(회사소개, 사업개요) 부분 퍼블리싱",
     thumbnail: "/images/thumb/tdb-thumb.jpg",
     link: "https://tdb50jo.co.kr/",
   },
@@ -31,7 +31,7 @@ const workData = [
     id: "work-nursing",
     type: "회사",
     title: "Kunsan College of Nursing",
-    summary: "원페이지 섹션별 퍼블리싱 부분 참여",
+    summary: "원페이지 슬라이드, 칼럼 등 섹션별 퍼블리싱 참여",
     thumbnail: "/images/thumb/nursing-thumb.jpg",
     link: "https://kunsancollege.ac.kr/",
   },
@@ -40,16 +40,16 @@ const workData = [
     type: "회사",
     title: "(주)창대이엔씨",
     summary:
-      "메인 페이지 부분 퍼블리싱 + 상세 페이지(회사소개, 시공분야) 부분 퍼블리싱",
+      "메인 페이지 슬라이드, 카드, 배너 등 퍼블리싱 + 상세 페이지(회사소개, 시공분야) 부분 퍼블리싱",
     thumbnail: "/images/thumb/changdae-thumb.jpg",
-    link: "https://kunsancollege.ac.kr/",
+    link: "http://www.changdaeenc.com/",
   },
   {
     id: "work-taeyoung",
     type: "회사",
     title: "(주)태영ENC",
     summary:
-      "메인 페이지 부분 퍼블리싱 + 상세 페이지(회사소개, 품질관리) 부분 퍼블리싱",
+      "메인 페이지 슬라이드, 배너 및 카드 등 부분 퍼블리싱 + 상세 페이지(회사소개, 품질관리) 부분 퍼블리싱",
     thumbnail: "/images/thumb/taeyoung-thumb.jpg",
     link: "http://taeyoungenc.co.kr/",
   },
@@ -58,7 +58,7 @@ const workData = [
     type: "회사",
     title: "(주)아코스",
     summary:
-      "메인 페이지 부분 퍼블리싱 + 상세 페이지(기업소개, 기업경쟁력, 사업영역) 부분 퍼블리싱",
+      "메인 페이지 슬라이드, 배너 및 카드 등 부분 퍼블리싱 + 상세 페이지(기업소개, 기업경쟁력, 사업영역) 부분 퍼블리싱",
     thumbnail: "/images/thumb/akos-thumb.jpg",
     link: "http://akos.shazam.co.kr/",
   },
@@ -67,7 +67,7 @@ const workData = [
     type: "회사",
     title: "장연(주)",
     summary:
-      "메인 페이지 부분 퍼블리싱 + 상세 페이지(회사소개, 제품소개) 부분 퍼블리싱",
+      "메인 페이지 슬라이드, 배너 등 부분 퍼블리싱 + 상세 페이지(회사소개, 제품소개) 부분 퍼블리싱",
     thumbnail: "/images/thumb/jangyeon-thumb.jpg",
     link: "https://www.jangyeon.com/",
   },
