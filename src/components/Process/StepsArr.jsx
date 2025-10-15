@@ -10,12 +10,12 @@ import {
 import { useRef, useEffect } from "react";
 
 const lineAni = keyframes`
-  0% {
-      stroke-dashoffset: 1;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
+   0% {
+    stroke-dashoffset: -2075;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 `;
 
 const Container = styled.div`
@@ -27,21 +27,27 @@ const Container = styled.div`
     margin-top: 50px;
     font-size: 0;
     .arrbg {
-      /* position: absolute; */
-      /* border: 1px solid #00f; */
       max-width: 100%;
       width: 88%;
       height: auto;
       display: block;
       aspect-ratio: 1684 / 456;
-      /* .path {
-       
-      } */
+      .path {
+        /* stroke-dasharray: 2075; */
+        stroke-dasharray: 12 8;
+        stroke-dashoffset: 2075;
+        stroke: #c0c9c6;
+        stroke-width: 3;
+        &.ani {
+          animation: ${lineAni} 2s ease-out forwards;
+        }
+        /* stroke-dasharray: 3000; */
+      }
     }
   }
   &.ani {
     .path {
-      /* animation: ${lineAni} 2s linear infinite; */
+      /* animation: ${lineAni} 2s ease-out forwards; */
     }
   }
 
