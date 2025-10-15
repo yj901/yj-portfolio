@@ -9,7 +9,7 @@ const teamData = [
     size: 6,
     position: "Frontend (HOME / TEAM HOME / Header · Footer)",
     summary:
-      "ROOKie는 KBO 야구 팬을 위한 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 웹 서비스입니다. 팬들이 원하는 순간의 영상을 빠르게 즐기고 관련 굿즈로 자연스럽게 이어지는 경험을 제공하는 것을 목표로 했습니다.",
+      "ROOKie는 KBO 야구 팬을 위한 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 OTT커머스 웹 서비스입니다. 팬들이 원하는 순간의 영상을 빠르게 즐기고 관련 굿즈로 자연스럽게 이어지는 경험을 제공하는 것을 목표로 했습니다.",
     category: ["React", "JavaScript", "UI/UX"],
     thumbnail: "/images/thumb/rookie-thumb.jpg",
     fullDescription: `ROOKie는 KBO 야구 팬을 위한 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 웹 서비스입니다. 팬들이 원하는 순간의 영상을 빠르게 즐기고 관련 굿즈로 자연스럽게 이어지는 경험을 제공하는 것을 목표로 했습니다.  
