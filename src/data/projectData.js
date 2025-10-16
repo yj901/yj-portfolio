@@ -69,12 +69,12 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
       "/images/details/cinema-detail2.jpg",
       "/images/details/cinema-detail3.jpg",
     ],
-    // troubleshooting: [
-    //   {
-    //     title: "",
-    //     desc: "",
-    //   },
-    // ],
+    troubleshooting: [
+      {
+        title: "검색 결과 더보기 버튼 추가",
+        desc: "TMDB API는 처음에 데이터를 불러올 때 최대 20개까지가 한계였기 때문에 20개가 넘어가는 키워드를 검색할 시 그 이상은 잘린 상태로 검색이 되는 문제가 있었습니다. 처음에는 알아차리지 못하였으나 계속 검색 테스트를 통해 20개 이상 안 나오는 것을 발견하고 더보기 버튼을 추가하여 클릭 시 데이터의 다음 page 응답을 가지고 와서 이전 데이터와 합치는 방식으로 해결하였습니다.",
+      },
+    ],
     improvements: [
       {
         title: "Next.js 활용 확장",
