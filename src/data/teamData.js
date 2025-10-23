@@ -178,6 +178,8 @@ const teamData = [
     ],
     github: "https://github.com/dayekimm0/Rookie",
     link: "https://rookie-dd013.firebaseapp.com/",
+    figma:
+      "https://www.figma.com/design/EB9qqlUAW1j5HOxTQvtfyq/ROOKie-Project-2.0?node-id=0-1&p=f&t=xRlRxDU7U0Mf5vlE-0",
     videoUrl: null,
   },
   {
@@ -187,7 +189,7 @@ const teamData = [
     date: "2025.03 ~ 2025.04",
     duration: "1개월",
     size: 5,
-    position: "Frontend (PM / Event / Header · Cart)",
+    position: "PM, Frontend (Event / Header · Cart)",
     summary:
       "KUORA는 독창적인 디자인과 기능성을 추구하는 프리미엄 가구 브랜드를 주제로 제작한 이커머스 웹사이트입니다. 하이엔드 소비자를 대상으로 세련된 UI와 직관적인 사용 흐름을 통해 고급스러운 쇼핑 경험을 제공하는 것을 목표로 했습니다.",
     category: ["React", "JavaScript", "SCSS", "UI/UX"],
@@ -420,6 +422,76 @@ const teamData = [
     ],
     github: "https://github.com/submaestro/metaphor",
     link: "https://metaphor-8079a.web.app/",
+    videoUrl: null,
+  },
+  {
+    id: "team-pet",
+    type: "팀",
+    title: "PETOPIA",
+    date: "2025.01",
+    duration: "1주",
+    size: 4,
+    position: "PM, UI·UX",
+    summary:
+      "PETOPIA는 반려동물과 보호자를 위한 통합 라이프스타일 플랫폼으로, 정보 탐색 편의성과 맞춤 경험을 중심으로 설계한 UI·UX 프로젝트입니다. 피그마로 와이어프레임부터 프로토타입까지 제작하였으며, 사용자 리서치 기반 UX 개선을 목표로 했습니다.",
+    category: ["Figma"],
+    thumbnail: "/images/thumb/pet-thumb.jpg",
+    fullDescription: `PETOPIA는 반려동물과 보호자를 위한 장소·병원·서비스 정보를 한데 모은 플랫폼입니다.
+사용자 리서치로 도출한 문제(분산된 정보·후기 부재·관리 불편)를 바탕으로 로그인 / 마이페이지 / 병원 / 플레이스 중심의 구조를 설계하고 피그마로 주요 흐름을 구현했습니다.
+팀 전원이 UI·UX 역할을 맡았으며, 저는 플레이스 화면의 UI 시안 제작과 UX 리서치·페르소나·솔루션 제안을 담당했습니다.
+(커뮤니티와 스토어는 IA까지만 설계하고 UI 제작은 제외되었습니다.)
+    `,
+    features: [
+      "사용자 리서치를 기반으로 페르소나 및 사용자 여정맵 도출",
+      "서비스 정보구조(IA) 및 전체 워크플로우 설계",
+      "피그마 프로토타입으로 주요 사용자 시나리오 상호작용 구현",
+      "핵심 기능 영역(로그인, 마이페이지, 병원, 플레이스) 중심의 UX/UI 시안 설계 및 제작",
+      "스토어, 커뮤니티 영역은 IA 및 서비스 구조 정의 단계까지 진행",
+    ],
+    techStack: ["UI/UX", "Figma", "Prototype"],
+    techDetails: [
+      {
+        name: "Figma",
+        summary:
+          "와이어프레임, UI 시안, 디자인 시스템 제작 및 프로토타입 구현에 사용. 각 파트별 프로토타입을 통해 클릭·탭·페이지 전환 등 주요 상호작용을 재현하고, 발표 시 사용자 흐름을 시각적으로 전달했습니다.",
+        usedFor: [
+          "UI 시안 및 인터랙션 프로토타입 제작",
+          "병원, 플레이스 등 주요 플로우 설계 및 연결 구조 구현",
+        ],
+      },
+    ],
+    contributions: [
+      {
+        title: "PM",
+        desc: "팀 일정과 진행 상황을 관리하며, 회의에서 팀원 의견을 수렴해 방향성을 조율했습니다. 협업 효율을 높이기 위해 회의록과 일정표를 문서화했고, 프로젝트 발표를 담당했습니다.",
+      },
+      {
+        title: "UI — 플레이스",
+        desc: "플레이스 화면의 고해상도 UI를 설계·제작했습니다. 지도 기반 탐색과 리스트 병행 인터페이스를 구성하고, 카테고리 필터·시설 아이콘 등으로 직관적인 탐색 경험을 구현했습니다. 또한 피그마 프로토타입을 통해 주요 상호작용(검색→상세→후기)을 구현했습니다.",
+      },
+      {
+        title: "UX — 리서치, 페르소나, 솔루션",
+        desc: "사용자 인터뷰와 설문을 통해 인사이트를 도출하고, 페르소나 및 사용자 여정을 정의했습니다. 이를 기반으로 주요 기능(검색·필터·비대면 상담·캘린더 등)의 솔루션을 제안하고 UX 발표 자료를 구성했습니다.",
+      },
+    ],
+    improvements: [
+      {
+        title: "서비스 확장 및 실제 구현",
+        desc: "현재는 피그마 기반의 UI·UX 시안 및 프로토타입 단계이지만, 추후 여력이 된다면 React Native 등으로 실제 서비스를 개발하고 앱 형태로 구현해보고자 합니다.",
+      },
+    ],
+    imageList: [
+      "/images/details/pet-detail2.jpg",
+      "/images/details/pet-detail3.jpg",
+      // "/images/details/pet-detail4.jpg",
+      "/images/details/pet-detail (1).jpg",
+      "/images/details/pet-detail (2).jpg",
+      "/images/details/pet-detail (3).jpg",
+    ],
+    figma:
+      "https://www.figma.com/design/m77PLBNvs9U5kQh2Y34CRN/%EB%B0%9C%ED%91%9C-ppt?node-id=0-1&p=f&t=bHq8zTjyFh2bAu8k-0",
+    figma2:
+      "https://www.figma.com/design/5GL5fzGejEgg061PYt2DT6/prototype-%EC%B5%9C%EC%A2%85%EB%B3%B8--%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84?node-id=321-1657&t=mrl5hJCoDhgXWYwt-0",
     videoUrl: null,
   },
 ];

@@ -549,6 +549,16 @@ const ProjectModal = ({ data, onClose }) => {
                     사이트 바로가기 <ArrowRight size={22} strokeWidth={2} />
                   </a>
                 )}
+                {data.figma && (
+                  <a href={data.github} className="githubBtn" target="_blank">
+                    Figma UX 발표
+                  </a>
+                )}
+                {data.figma2 && (
+                  <a href={data.link} target="_blank">
+                    Figma UI 프로토타입 <ArrowRight size={22} strokeWidth={2} />
+                  </a>
+                )}
               </LinkBtns>
 
               <SubTitle>주요 기능 및 특징</SubTitle>
