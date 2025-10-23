@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 import lenis from "../utils/lenis";
-import { X, ArrowRight } from "lucide-react";
+import { X, ArrowRight, Check } from "lucide-react";
 import Github from "./Github";
 import TechAccordion from "./TechAccordion";
-import { Check } from "lucide-react";
 import LightBox from "./LightBox";
+import figma from "../assets/skills/figma_wline.png";
+import figma2 from "../assets/skills/figma_line.png";
 
 const Overlay = styled.div`
   position: fixed;
@@ -214,38 +215,55 @@ const LinkBtns = styled.div`
         fill: var(--light);
       }
     }
+    img {
+      object-fit: cover;
+      height: 20px;
+    }
   }
 
   @media screen and (max-width: 1600px) {
     gap: 14px;
     a {
-      padding: 8px 20px;
+      padding: 10px 20px;
       font-size: 1.6rem;
       gap: 9px;
       svg {
         width: 18px;
+        height: 18px;
+      }
+      img {
+        height: 18px;
       }
     }
   }
   @media screen and (max-width: 1024px) {
     gap: 12px;
     a {
-      padding: 6px 16px;
+      padding: 9px 16px;
       font-size: 1.4rem;
       gap: 8px;
       svg {
         width: 16px;
+        height: 16px;
+      }
+
+      img {
+        height: 16px;
       }
     }
   }
   @media screen and (max-width: 768px) {
     gap: 8px;
     a {
-      padding: 4px 14px;
+      padding: 8px 14px;
       font-size: 1.3rem;
       gap: 6px;
       svg {
         width: 14px;
+        height: 14px;
+      }
+      img {
+        height: 14px;
       }
     }
   }
@@ -541,22 +559,23 @@ const ProjectModal = ({ data, onClose }) => {
               <LinkBtns>
                 {data.github && (
                   <a href={data.github} className="githubBtn" target="_blank">
-                    <Github /> GITHUB
+                    <Github size={20} strokeWidth={2} /> GITHUB
                   </a>
                 )}
                 {data.link && (
                   <a href={data.link} target="_blank">
-                    사이트 바로가기 <ArrowRight size={22} strokeWidth={2} />
+                    사이트 바로가기 <ArrowRight size={20} strokeWidth={2} />
                   </a>
                 )}
                 {data.figma && (
-                  <a href={data.github} className="githubBtn" target="_blank">
-                    Figma UX 발표
+                  <a href={data.figma} className="githubBtn" target="_blank">
+                    <img src={figma} alt="icon" /> UX 발표자료
                   </a>
                 )}
                 {data.figma2 && (
-                  <a href={data.link} target="_blank">
-                    Figma UI 프로토타입 <ArrowRight size={22} strokeWidth={2} />
+                  <a href={data.figma2} target="_blank">
+                    <img src={figma2} alt="icon" /> UI 프로토타입{" "}
+                    <ArrowRight size={22} strokeWidth={2} />
                   </a>
                 )}
               </LinkBtns>

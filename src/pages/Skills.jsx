@@ -285,7 +285,7 @@ const Skills = () => {
                     <Tit>{data.skill}</Tit>
                     {iconSrc && (
                       <Icon>
-                        <img src={iconSrc} alt="icon" aria-hidden="true" />
+                        <img src={iconSrc} alt="icon" />
                       </Icon>
                     )}
                   </TitWrap>
