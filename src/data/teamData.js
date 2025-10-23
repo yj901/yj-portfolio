@@ -433,7 +433,7 @@ const teamData = [
     size: 4,
     position: "PM, UI·UX",
     summary:
-      "PETOPIA는 반려동물과 보호자를 위한 통합 라이프스타일 플랫폼으로, 정보 탐색 편의성과 맞춤 경험을 중심으로 설계한 UI·UX 프로젝트입니다. 피그마로 와이어프레임부터 프로토타입까지 제작하였으며, 사용자 리서치 기반 UX 개선을 목표로 했습니다.",
+      "PETOPIA는 반려동물과 보호자를 위한 통합 라이프스타일 플랫폼으로 정보 탐색 편의성과 맞춤 경험을 중심으로 설계한 UI·UX 프로젝트입니다. 피그마로 와이어프레임부터 프로토타입까지 제작하였으며 사용자 리서치 기반 UX 개선을 목표로 했습니다.",
     category: ["Figma"],
     thumbnail: "/images/thumb/pet-thumb.jpg",
     fullDescription: `PETOPIA는 반려동물과 보호자를 위한 장소·병원·서비스 정보를 한데 모은 플랫폼입니다.
