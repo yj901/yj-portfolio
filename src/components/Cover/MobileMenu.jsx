@@ -118,10 +118,10 @@ const MobileMenu = () => {
             <a href="#about">ABOUT</a>
           </li>
           <li>
-            <a href="#project">PROJECT</a>
+            <a href="#team">TEAM</a>
           </li>
           <li>
-            <a href="#team">TEAM</a>
+            <a href="#project">PROJECT</a>
           </li>
           <li>
             <a href="#work">WORK</a>

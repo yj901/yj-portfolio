@@ -330,6 +330,7 @@ const Desc = styled.p`
   @media screen and (max-width: 768px) {
     font-size: 1.35rem;
     margin-bottom: 20px;
+    -webkit-line-clamp: 5;
   }
   @media screen and (max-width: 500px) {
     font-size: 1.3rem;

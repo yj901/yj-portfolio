@@ -48,6 +48,39 @@ const Gnb = styled.ul`
     font-size: 2rem;
     font-weight: 400;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0;
+    transition: opacity 0.3s;
+
+    span {
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        opacity 0.5s;
+    }
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      content: attr(data-hover);
+      display: inline;
+      text-align: center;
+      transition: top 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s;
+    }
+    &:hover {
+      opacity: 0.6;
+      span {
+        transform: translateY(-100%);
+      }
+      &::after {
+        top: 0;
+      }
+    }
   }
 
   @media screen and (max-width: 1600px) {
@@ -81,12 +114,24 @@ const Header = () => {
     <Container className="innerlg">
       <Logo>YJ.dev</Logo>
       <Gnb>
-        <li onClick={() => scrollToSection("about")}>ABOUT</li>
-        <li onClick={() => scrollToSection("project")}>PROJECT</li>
-        <li onClick={() => scrollToSection("team")}>TEAM</li>
-        <li onClick={() => scrollToSection("work")}>WORK</li>
-        <li onClick={() => scrollToSection("skills")}>SKILLS</li>
-        <li onClick={() => scrollToSection("process")}>PROCESS</li>
+        <li onClick={() => scrollToSection("about")} data-hover="ABOUT">
+          <span>ABOUT</span>
+        </li>
+        <li onClick={() => scrollToSection("team")} data-hover="TEAM">
+          <span>TEAM</span>
+        </li>
+        <li onClick={() => scrollToSection("project")} data-hover="PROJECT">
+          <span>PROJECT</span>
+        </li>
+        <li onClick={() => scrollToSection("work")} data-hover="WORK">
+          <span>WORK</span>
+        </li>
+        <li onClick={() => scrollToSection("skills")} data-hover="SKILLS">
+          <span>SKILLS</span>
+        </li>
+        <li onClick={() => scrollToSection("process")} data-hover="PROCESS">
+          <span>PROCESS</span>
+        </li>
       </Gnb>
       <BtnWrap>
         <SwapBtn label={"CONTACT"} onClick={() => scrollToSection("contact")} />

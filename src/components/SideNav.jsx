@@ -171,16 +171,16 @@ const SideNav = () => {
           <span></span>
         </li>
         <li
-          data-name="PROJECT"
-          onClick={() => scrollToSection("project")}
-          className={current === "project" ? "active" : ""}
+          data-name="TEAM"
+          onClick={() => scrollToSection("team")}
+          className={current === "team" ? "active" : ""}
         >
           <span></span>
         </li>
         <li
-          data-name="TEAM"
-          onClick={() => scrollToSection("team")}
-          className={current === "team" ? "active" : ""}
+          data-name="PROJECT"
+          onClick={() => scrollToSection("project")}
+          className={current === "project" ? "active" : ""}
         >
           <span></span>
         </li>
