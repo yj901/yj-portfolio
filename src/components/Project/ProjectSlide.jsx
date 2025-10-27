@@ -117,7 +117,7 @@ const ProjectSlide = () => {
           }}
           breakpoints={{
             0: {
-              slidesPerView: 1.2,
+              slidesPerView: 1.1,
               spaceBetween: 15,
             },
             550: {

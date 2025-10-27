@@ -15,7 +15,16 @@ const SliderSection = styled.section`
   /* margin-left: calc((100% - 1400px) / 2); */
   margin-left: 10%;
   margin-right: 150px;
-
+  .swiper {
+    display: flex;
+  }
+  .swiper-wrapper {
+    display: flex;
+    height: auto;
+  }
+  .swiper-slide {
+    display: flex;
+  }
   @media screen and (max-width: 1680px) {
     margin-top: 85px;
     margin-left: 5.2%;
@@ -91,13 +100,13 @@ const WorkSlider = () => {
       </SlideArrWrap>
       <Swiper
         spaceBetween={40}
-        slidesPerView={3.3}
+        slidesPerView={2.8}
         onSwiper={(e) => {
           setSwiper(e);
         }}
         breakpoints={{
           0: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.1,
             spaceBetween: 15,
           },
           550: {
@@ -109,18 +118,21 @@ const WorkSlider = () => {
             spaceBetween: 25,
           },
           1024: {
-            slidesPerView: 2.4,
+            slidesPerView: 2.2,
             spaceBetween: 30,
           },
           1250: {
-            slidesPerView: 2.6,
+            slidesPerView: 2.4,
             spaceBetween: 30,
           },
           1400: {
-            slidesPerView: 2.8,
+            slidesPerView: 2.6,
           },
           1600: {
-            slidesPerView: 3.3,
+            slidesPerView: 2.8,
+          },
+          1700: {
+            slidesPerView: 2.8,
           },
         }}
       >

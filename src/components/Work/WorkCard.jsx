@@ -24,25 +24,17 @@ const Thumbnail = styled.img`
 
 const TextWrap = styled.div`
   padding: 28px 32px 32px;
-  height: 250px;
-  @media screen and (max-width: 1920px) {
-    height: 220px;
-  }
   @media screen and (max-width: 1600px) {
     padding: 26px 30px 30px;
-    height: 190px;
   }
   @media screen and (max-width: 1400px) {
     padding: 24px 28px 28px;
-    height: 180px;
   }
   @media screen and (max-width: 1024px) {
     padding: 20px 24px 24px;
-    height: 160px;
   }
   @media screen and (max-width: 768px) {
     padding: 16px 20px 20px;
-    height: 140px;
   }
 `;
 
@@ -76,23 +68,19 @@ const Summary = styled.p`
   line-height: 1.5;
   word-break: keep-all;
   @media screen and (max-width: 1600px) {
-    height: 45px;
-    margin: 16px 0;
+    margin: 16px 0 0;
     font-size: 1.5rem;
   }
   @media screen and (max-width: 1400px) {
-    height: 42px;
-    margin: 15px 0;
+    margin: 15px 0 0;
     font-size: 1.4rem;
   }
   @media screen and (max-width: 1024px) {
-    height: 42px;
-    margin: 14px 0;
+    margin: 14px 0 0;
     font-size: 1.35rem;
   }
   @media screen and (max-width: 768px) {
-    height: 40px;
-    margin: 10px 0;
+    margin: 12px 0 0;
     font-size: 1.3rem;
   }
 `;

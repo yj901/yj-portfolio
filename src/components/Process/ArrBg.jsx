@@ -56,7 +56,7 @@ const ArrBg = () => {
               attributeName="stroke-dashoffset"
               from="-2075"
               to="0"
-              dur="2.5s"
+              dur="2s"
               fill="freeze"
               begin="indefinite"
             />
