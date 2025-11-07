@@ -430,7 +430,7 @@ const About = () => {
               GITHUB
             </a>
             <a
-              href="https://vivid-decimal-3d0.notion.site/2647fa1eab3680d9a5b9c051364f7890"
+              href="https://vivid-decimal-3d0.notion.site/Frontend-Developer-2a17fa1eab3680a2847ef55d47b6c78b"
               target="_blank"
             >
               RESUME
