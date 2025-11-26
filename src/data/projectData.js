@@ -26,30 +26,44 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
       {
         name: "Next.js",
         summary:
-          "App Router 기반 라우팅을 적용하고, 서버와 클라이언트 컴포넌트를 구분하여 화면을 구성했습니다.",
-        usedFor: ["라우팅 구조", "페이지/레이아웃 구성"],
+          "App Router 기반 SSR/CSR 하이브리드 구조를 적용했습니다. Server Component로 레이아웃을 SSR 처리하고, 데이터 페칭 로직은 Client Component로 분리해 CSR 처리했습니다. Query Parameter 기반 모달 라우팅을 구현하여 브라우저 히스토리와 URL 공유를 지원했습니다.",
+        usedFor: [
+          "Server/Client Component 분리",
+          "Query Parameter 기반 모달 라우팅",
+          "페이지/레이아웃 구성",
+        ],
       },
       {
         name: "TypeScript",
         summary:
-          "API 응답 타입과 컴포넌트 props 타입을 정의하여 런타임 오류를 줄이고 안정적인 코드 작성이 가능하도록 했습니다.",
-        usedFor: ["API 타입 정의", "컴포넌트 props 타입 관리"],
-      },
-      {
-        name: "React",
-        summary:
-          "컴포넌트 구조를 활용해 섹션별 UI를 분리하고 상태 변화에 따라 필요한 부분만 렌더링하도록 구성했습니다.",
+          "TMDB API 응답 구조를 IGetMovieResult, IGetTvResult 인터페이스로 정의하여 results, page, total_pages 등의 타입을 명확히 했습니다. useSuspenseQuery에 제네릭을 적용하여 queryFn 반환 타입을 보장하고 타입 안정성을 확보했습니다.",
         usedFor: [
-          "레이아웃과 UI 컴포넌트 분리",
-          "상태 기반 조건부 렌더링",
-          "재사용 가능한 UI 구성",
+          "API 응답 타입 정의 (IGetMovieResult, IGetTvResult)",
+          "컴포넌트 props 타입 관리",
+          "제네릭을 활용한 타입 보장",
         ],
       },
       {
         name: "React Query",
         summary:
-          "TMDB API와 연결해 서버 데이터를 가져오고 캐싱을 통해 동일한 요청을 최소화했습니다.",
-        usedFor: ["데이터 패칭", "캐싱", "로딩/에러 상태 관리"],
+          "useSuspenseQuery로 메인 페이지 배너와 슬라이드 3개 API를 병렬 호출하고 Suspense Boundary로 로딩 UI를 선언적으로 처리했습니다. 검색 페이지는 useInfiniteQuery로 구현하여 enabled 옵션으로 검색어 입력 시에만 실행하고 getNextPageParam으로 다음 페이지를 자동 계산했습니다. queryKey를 [type, section.key, query] 구조로 설계하여 Movie/TV, 검색어별 독립 캐시를 관리하고 staleTime 5분, gcTime 30분 설정으로 불필요한 API 재호출을 방지했습니다.",
+        usedFor: [
+          "useSuspenseQuery로 병렬 API 호출 및 Suspense 처리",
+          "useInfiniteQuery로 무한 스크롤 검색 구현",
+          "queryKey 설계로 독립 캐시 관리",
+          "QueryClient Provider로 전역 캐시 관리",
+        ],
+      },
+      {
+        name: "React",
+        summary:
+          "컴포넌트 구조를 활용해 섹션별 UI를 분리하고 상태 변화에 따라 필요한 부분만 렌더링하도록 구성했습니다. React.memo와 useCallback을 활용해 모달 열림/닫힘 시 불필요한 리렌더링을 방지하고 검색 카드 리스트에서 새 데이터 추가 시 기존 카드는 리렌더링되지 않도록 최적화했습니다.",
+        usedFor: [
+          "레이아웃과 UI 컴포넌트 분리",
+          "상태 기반 조건부 렌더링",
+          "React.memo를 활용한 컴포넌트 메모이제이션",
+          "useCallback을 활용한 함수 참조 안정화",
+        ],
       },
       {
         name: "Tailwind CSS",
@@ -61,7 +75,10 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
         name: "Atomic Design",
         summary:
           "Atoms, Molecules, Organisms, Templates 단위로 컴포넌트를 구조화하여 재사용성과 유지보수성을 높였습니다.",
-        usedFor: ["컴포넌트 설계", "폴더 구조 관리"],
+        usedFor: [
+          "컴포넌트 설계 (atoms/molecules/organisms/templates)",
+          "폴더 구조 관리",
+        ],
       },
     ],
     imageList: [
@@ -74,11 +91,15 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
         title: "검색 결과 더보기 버튼 추가",
         desc: "TMDB API는 처음에 데이터를 불러올 때 최대 20개까지가 한계였기 때문에 20개가 넘어가는 키워드를 검색할 시 그 이상은 잘린 상태로 검색이 되는 문제가 있었습니다. 처음에는 알아차리지 못하였으나 계속 검색 테스트를 통해 20개 이상 안 나오는 것을 발견하고 더보기 버튼을 추가하여 클릭 시 데이터의 다음 page 응답을 가지고 와서 이전 데이터와 합치는 방식으로 해결하였습니다.",
       },
+      {
+        title: "React Query 설정 최적화 및 캐싱 전략 구현",
+        desc: "초기에는 QueryClient를 Provider 컴포넌트 내에서 직접 생성하여 리렌더링 시마다 캐시가 초기화되는 문제가 있었습니다. useState로 QueryClient 인스턴스를 관리하도록 변경하고, staleTime 5분, gcTime 30분 설정으로 불필요한 API 재호출을 방지했습니다. refetchOnWindowFocus를 false로 설정하여 탭 전환 시 불필요한 요청을 제거하고 사용자 경험을 개선했습니다.",
+      },
     ],
     improvements: [
       {
-        title: "Next.js 활용 확장",
-        desc: "Next.js로 처음 진행한 프로젝트라 완성 후 돌아보니 Next.js의 고유 기능(SSR/SSG 등)을 충분히 활용하지 못하고 CSR 중심으로 제작하게 된 점이 아쉬웠습니다. 향후에는 현재 UI를 유지하면서 SSR 구조로 확장해 초기 로딩 속도와 SEO를 강화해보고 싶습니다.",
+        title: "사용자 맞춤 기능 추가",
+        desc: "찜하기 기능과 시청 기록을 추가하여 사용자가 관심 있는 콘텐츠를 저장하고 나중에 다시 찾아볼 수 있도록 개선할 계획입니다. Firebase나 Zustand persist를 활용해 사용자 데이터를 관리할 수 있습니다.",
       },
     ],
     github: "https://github.com/yj901/cinema-scope",
@@ -97,7 +118,7 @@ Next.js App Router 기반으로 라우팅을 구성했고 클라이언트/서버
     tags: ["JavaScript", "Tailwind", "Chart.js"],
     thumbnail: "/images/thumb/weather-thumb.jpg",
     fullDescription: `현재 위치 기준으로 오늘/주간 날씨와 3시간 기온 변화를 한 화면에서 확인할 수 있습니다.
-기온 범위(JSON)와 매칭해 옷 추천을 보여주며, Tailwind 유틸리티와 글라스 스타일로 가벼운 UI를 구성했습니다.`,
+기온 범위(JSON)와 매칭해 옷 추천을 보여주며, Tailwind 유틸리티와 글래스모피즘 스타일로 가벼운 UI를 구성했습니다.`,
     features: [
       "현재 위치 기반 오늘/주간 날씨 표시",
       "3시간 단위 기온 라인 차트 (Chart.js)",
