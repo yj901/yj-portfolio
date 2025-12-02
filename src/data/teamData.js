@@ -12,8 +12,8 @@ const teamData = [
       "ROOKie는 KBO 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 OTT 커머스 웹 서비스입니다. React 기반으로 개발되었으며, 팬들이 원하는 영상을 빠르게 즐기고 굿즈 구매까지 자연스럽게 이어지는 통합 경험을 제공하도록 설계했습니다.",
     category: ["React", "JavaScript", "UI/UX"],
     thumbnail: "/images/thumb/rookie-thumb.jpg",
-    fullDescription: `ROOKie는 KBO 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 OTT 커머스 웹 서비스입니다. 사용자에게 영상 시청부터 관련 상품 구매까지 끊김 없는 통합 경험을 제공하는 것을 목표로 구조를 설계했습니다. 
-    저는 재사용 가능한 컴포넌트 구조를 기반으로 메인 HOME 페이지, TEAM HOME(업커밍 매치, 인플루언서 존 등), 그리고 공통 UI(Header, Footer)를 구현하여 개발 효율성을 확보했습니다. YouTube Data API 연동 시 React Query를 도입하여 데이터 캐싱 및 최신화 로직을 최적화했습니다. 이를 통해 API 호출 효율을 높이고 동적 슬라이드 UI를 안정적으로 구성했습니다.
+    fullDescription: `ROOKie는 KBO 하이라이트 영상 큐레이션과 굿즈 커머스를 결합한 OTT 커머스 웹 서비스입니다. 사용자에게 영상 시청부터 관련 상품 구매까지 끊김 없이 이어지는 통합 경험을 제공하는 것을 목표로 설계했습니다. 
+    저는 메인 HOME 페이지, TEAM HOME(업커밍 매치, 인플루언서 존 등), 그리고 공통 UI(Header, Footer)를 담당했습니다. React Query와 Zustand 기반 상태 관리, YouTube API 연동 등을 진행했습니다.
 `,
     features: [
       "HOME: 로그인/비로그인 분기, 리그 순위·인기 굿즈 큐레이션",
@@ -208,7 +208,7 @@ const teamData = [
     category: ["React", "JavaScript", "SCSS", "UI/UX"],
     thumbnail: "/images/thumb/kuora-thumb.jpg",
     fullDescription: `KUORA는 React 기반으로 개발된 프리미엄 가구 이커머스 웹사이트입니다. 하이엔드 소비자를 위한 세련된 UI와 직관적인 쇼핑 흐름을 구현하여 고급스러운 디지털 경험을 제공하는 것을 목표로 설계했습니다. 
-    저는 PM으로서 프로젝트 일정 관리 및 UI/UX 가이드라인을 총괄하여 협업의 일관성을 확보했습니다. 기술적으로는 컴포넌트 단위 설계를 기반으로 Header 및 Event Page 등 핵심 UI를 구현했습니다. Context API를 활용한 'CartContext' 기반으로 장바구니 기능을 구현하여 전역 상태 관리의 일관성을 확보했습니다. 또한 GitHub Pages 기반의 서버리스 데이터 연동 시스템을 설계하여 상품 정보의 안정적 제공과 배포 단순화를 달성했습니다.
+  저는 PM으로서 프로젝트 일정 관리 및 UI/UX 가이드라인을 총괄하여 협업의 일관성을 확보했습니다. 기술적으로는 Header 및 Event Page 등 핵심 UI를 구현했고, Zustand를 활용하여 장바구니 전역 상태를 관리했습니다. 또한 GitHub Pages 기반의 정적 상품 데이터 제공으로 안정적인 데이터 연동을 이루었습니다.
     `,
     features: [
       "HOME: 브랜드 아이덴티티를 강조한 메인 랜딩 페이지",
